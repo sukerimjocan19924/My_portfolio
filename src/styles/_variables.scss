@@ -1,0 +1,82 @@
+@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css');
+
+$base-unit: 1rem; // 10px 기준
+$font-sans: 'SUIT Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+// Font sizes
+$font-size-xs: 1.2rem;
+$font-size-sm: 1.4rem;
+$font-size-md: 1.6rem;
+$font-size-lg: 1.8rem;
+$font-size-xl: 2rem;
+$font-size-2xl: 2.4rem;
+$font-size-3xl: 3.2rem;
+
+// Spacing
+$space-1: 0.8rem;
+$space-2: 1.2rem;
+$space-3: 1.6rem;
+$space-4: 2.4rem;
+$space-5: 3.2rem;
+$space-6: 4rem;
+$space-8: 4.8rem;
+$space-9: 5.4rem;
+$space-10: 6.4rem;
+$space-12: 8rem;
+$space-16: 10rem;
+$space-20: 12rem;
+$space-24: 16rem;
+
+// Radius
+$radius-sm: 1rem;
+$radius-md: 2rem;
+$radius-lg: 3rem;
+$radius-xl: 4rem;
+$radius-full: 9999px;
+
+// Brand / Primary Colors (Red Series)
+$color-primary: #ff2d2d;       // Primary Red
+$color-primary-deep: #e22828;  // Deep Red
+$color-primary-light: #fff6f6; // Light Red
+$color-primary-hover: #d32f2f; // Hover Red
+
+// Background Palette (Light Mode 기준)
+$color-bg: #ffffff;
+$color-bg-main: #fff7fa;
+$color-bg-footer: #f5f0f0;
+$color-bg-icon: #fff0f0;
+$color-bg-badge: #eeece6;
+
+// Text Palette
+$color-text: #1a1a1a;       // Primary Text
+$color-text-secondary: #888888;
+$color-text-tertiary: #aaaaaa;
+$color-text-disabled: #cccccc;
+
+// Border / Divider
+$color-border-main: #e0ddb6;
+$color-border-card: #e8dede;
+$color-border-sub: #ddcfcf;
+$color-border-red: #ffd5d5;
+
+// Status Colors
+$color-success: #22c55e;
+$color-info: #0ea5e9;
+$color-warning: #f59e0b;
+$color-danger: #ef4444;
+
+// Shadows
+$shadow-sm: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.05);
+$shadow-md: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
+
+// Breakpoints
+$breakpoint-sm: 50rem;
+$breakpoint-md: 76.8rem;
+$breakpoint-lg: 102.4rem;
+$breakpoint-xl: 128rem;
+$breakpoint-2xl: 160rem;
+
+// Transition
+$transition-theme: color 0.2s ease, background-color 0.2s ease,
+  border-color 0.2s ease, box-shadow 0.2s ease;

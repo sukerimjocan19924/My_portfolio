@@ -1,0 +1,94 @@
+@use 'variables' as *;
+
+:root {
+  color-scheme: light;
+
+  // Background
+  --color-bg: #ffffff;
+  --color-bg-muted: #fffafa;   // 메인 BG
+  --color-card-bg: #f5f0f0;    // 카드/푸터 BG
+  --color-header-bg: rgba(255, 255, 255, 0.85);
+
+  // Text
+  --color-text: #1a1a1a;       // 기본 텍스트
+  --color-text-muted: #888888; // 보조 텍스트
+  --color-text-tertiary: #aaaaaa;
+  --color-text-disabled: #cccccc;
+
+  // Border / Divider
+  --color-border: #e0d6d6;     // 메인 보더
+  --color-border-card: #e8dede;
+  --color-border-sub: #ddcfcf;
+  --color-border-red: #ffd5d5;
+
+  // Primary (Red Series)
+  --color-primary: #ff2d2d;       // 브랜드 레드
+  --color-primary-deep: #e22828;  // 딥 레드
+  --color-primary-light: #fff6f6; // 라이트 레드
+  --color-primary-hover: #d32f2f;
+
+  // Accent / Badge
+  --color-icon-bg: #fff0f0;
+  --color-badge-bg: #eecece;
+
+  // 상태 색상
+  --color-success: #22c55e;
+  --color-info: #0ea5e9;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  // 버튼
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-text: #ffffff;
+  --btn-outline-border: var(--color-border);
+  --btn-outline-text: var(--color-text);
+
+  // Shadow
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  // Background
+  --color-bg: #0a0a0a;
+  --color-bg-muted: #111111;
+  --color-card-bg: #1a1a1a;
+  --color-header-bg: rgba(15, 15, 15, 0.9);
+
+  // Text
+  --color-text: #ffffff;
+  --color-text-muted: #aaaaaa;
+  --color-text-tertiary: #777777;
+  --color-text-disabled: #555555;
+
+  // Border / Divider
+  --color-border: #2a2a2a;
+  --color-border-card: #333333;
+  --color-border-sub: #555555;
+  --color-border-red: #ffd5d5;
+
+  // Primary (Red Series)
+  --color-primary: #ff2d2d;
+  --color-primary-deep: #e22828;
+  --color-primary-light: #fff6f6;
+  --color-primary-hover: #cc2020;
+
+  // Accent / Badge
+  --color-icon-bg: #1e1e1e;
+  --color-badge-bg: #2a2a2a;
+
+  // 상태 색상
+  --color-success: #22c55e;
+  --color-info: #0ea5e9;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  --btn-outline-border: var(--color-border);
+  --btn-outline-text: var(--color-text);
+
+  // Shadow
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
