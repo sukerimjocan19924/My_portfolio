@@ -46,6 +46,22 @@
   // Shadow
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
   --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+
+  // themeNavBtn
+  --theme-color-text-facus: #000000;
+  --theme-color-bg-facus: #FFFFFF;
+  --theme-color-border-facus: #CCBBBB;
+
+  // themeNavBtnContact
+  --theme-color-text-contact: #ffffff;
+  --theme-color-bg-contact: #FF9393;
+  --theme-color-bg-contact-facus: #FF2D2D;
+
+  // themeToggleBtn
+  --theme-color-bg: #FFF0F0;
+  --theme-color-border: #E0D6D6;
+  --theme-color-bg-hover: #FF7676;
+  --theme-color-border-hover: #FFFFFF;
 }
 
 [data-theme='dark'] {
@@ -70,7 +86,7 @@
   --color-border-red: #ffd5d5;
 
   // Primary (Red Series)
-  --color-primary: #ff2d2d;
+  --color-primary: #E22828;
   --color-primary-deep: #e22828;
   --color-primary-light: #fff6f6;
   --color-primary-hover: #cc2020;
@@ -91,4 +107,23 @@
   // Shadow
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+
+
+  // themeNavBtn
+  --theme-color-text-facus: #FFFFFF;
+  --theme-color-bg-facus: #1A1A1A;
+  --theme-color-border-facus: #333333;
+
+
+  // themeNavBtnContact
+  --theme-color-text-contact: #E6E6E6;
+  --theme-color-bg-contact: #761919;
+  --theme-color-bg-contact-facus: #E22828;
+
+  // themeToggleBtn
+  --theme-color-bg: #1A1A1A;
+  --theme-color-border: #2A2A2A;
+  --theme-color-bg-hover: #5C5C5C;
+  --theme-color-border-hover: #FFFFFF;
 }

@@ -9,32 +9,34 @@ const Header = () => {
   const {theme, toggleTheme} = useTheme()
   const [hover, setHover] = React.useState(false)
 
-  const logoIcon=icons.logo
-  const moonIcon=icons.moon
-  const moonHoverIcon=icons.moonHover
-  const sunIcon=icons.sun
-  const sunHoverIcon=icons.sunHover
 
 
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
         <NavLink to="/" className={styles.logo} end>
-          {logoIcon()} H.PORTFOLIO
+          {icons.logo()} H.PORTFOLIO
         </NavLink>
 
         <div className={styles.action}>
-          <nav className={styles.nav} aria-label='Main'>
-            <nav className={styles.nav} aria-label="Main">
-              {navItems.filter(item => item.label !== 'Contact').map(({to, label}) => (
-                <NavLink to={to} key={to} className={styles.link}>
-                  {label}
-                </NavLink>
-              ))}
-              <NavLink to="/contact" className={`${styles.link} ${styles.contactLink}`}>
-                Contact
+          <nav className={styles.nav} aria-label="Main">
+            {navItems.map(({to, label}) => (
+              <NavLink
+                to={to}
+                key={to}
+                className={({isActive}) =>
+                  isActive
+                    ? label === 'Contact'
+                      ? `${styles.link} ${styles.contactLink} ${styles.linkContactActive}`
+                      : `${styles.link} ${styles.linkActive}`
+                    : label === 'Contact'
+                      ? `${styles.link} ${styles.contactLink}`
+                      : styles.link
+                }
+              >
+                {label}
               </NavLink>
-            </nav>
+            ))}
           </nav>
         
           <button
