@@ -5,25 +5,25 @@
 
   // Background
   --color-bg: #ffffff;
-  --color-bg-muted: #fffafa;   // 메인 BG
-  --color-card-bg: #f5f0f0;    // 카드/푸터 BG
-  --color-header-bg: rgba(255, 255, 255, 0.85);
+  --color-bg-muted: #fffafa; // 메인 BG
+  --color-card-bg: #f5f0f0; // 카드/푸터 BG
+  --color-header-bg: #FFFAFA;
 
   // Text
-  --color-text: #1a1a1a;       // 기본 텍스트
-  --color-text-muted: #888888; // 보조 텍스트
-  --color-text-tertiary: #aaaaaa;
+  --color-text: #1a1a1a; // 기본 텍스트
+  --color-text-muted: #AAAAAA; // 보조 텍스트
+  --color-text-tertiary: #888888;
   --color-text-disabled: #cccccc;
 
   // Border / Divider
-  --color-border: #e0d6d6;     // 메인 보더
+  --color-border: #e0d6d6; // 메인 보더
   --color-border-card: #e8dede;
   --color-border-sub: #ddcfcf;
   --color-border-red: #ffd5d5;
 
   // Primary (Red Series)
-  --color-primary: #ff2d2d;       // 브랜드 레드
-  --color-primary-deep: #e22828;  // 딥 레드
+  --color-primary: #ff2d2d; // 브랜드 레드
+  --color-primary-deep: #e22828; // 딥 레드
   --color-primary-light: #fff6f6; // 라이트 레드
   --color-primary-hover: #d32f2f;
 
@@ -62,6 +62,31 @@
   --theme-color-border: #E0D6D6;
   --theme-color-bg-hover: #FF7676;
   --theme-color-border-hover: #FFFFFF;
+
+  // themeCaption
+  --theme-color-circle-bg: #FFA6A6;
+  --theme-color-circle: #FF2D2D;
+  --theme-color-caption-bg: #ffffff;
+  --theme-color-caption-border: #ffffff;
+
+  // mascot
+  --mascot-body: #ffffff;
+  --mascot-border: #E0D6D6;
+  --mascot-accent: #EEECE6;
+  --mascot-horn: #FF2D2D;
+  --mascot-eye: #333333;
+  --mascot-eye-highlight: #ffffff;
+  --mascot-nose: #FF2D2D;
+  --mascot-tail: #FF2D2D;
+  --mascot-color-card-bg: #f5f0f0;
+  --mascot-opacity-horn1: 0.3;
+  --mascot-opacity-horn2: 0.2;
+  --mascot-opacity-horn3: 0.15;
+  --mascot-opacity-horn4: 0.25;
+
+  // herobutton
+  --btn-hero-text: #888888;
+  --btn-hero-border: #DDCFCF;
 }
 
 [data-theme='dark'] {
@@ -75,7 +100,7 @@
 
   // Text
   --color-text: #ffffff;
-  --color-text-muted: #aaaaaa;
+  --color-text-muted: #555555;
   --color-text-tertiary: #777777;
   --color-text-disabled: #555555;
 
@@ -126,4 +151,29 @@
   --theme-color-border: #2A2A2A;
   --theme-color-bg-hover: #5C5C5C;
   --theme-color-border-hover: #FFFFFF;
+
+  // themeCaption
+  --theme-color-circle-bg: #FF2D2D;
+  --theme-color-circle: #CC2020;
+  --theme-color-caption-bg: #111111;
+  --theme-color-caption-border: #1E1E1E;
+
+  // mascot
+  --mascot-body: #1A1A1A;
+  --mascot-border: #2A2A2A;
+  --mascot-accent: #111111;
+  --mascot-horn: #CC2020;
+  --mascot-eye: #0A0A0A;
+  --mascot-eye-highlight: #FFFFFF;
+  --mascot-nose: #FF2D2D;
+  --mascot-tail: #FF2D2D;
+  --mascot-color-card-bg: #131313;
+  --mascot-opacity-horn1: 0.3;
+  --mascot-opacity-horn2: 0.4;
+  --mascot-opacity-horn3: 0.3;
+  --mascot-opacity-horn4: 0.2;
+
+  // herobutton
+  --btn-hero-text: #AAAAAA;
+  --btn-hero-border: #2A2A2A;
 }
