@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.inner}>
+      <div className={`inner ${styles.inner}`}>
         <NavLink to="/" className={styles.logo} end>
           {icons.logo()} H.PORTFOLIO
         </NavLink>
