@@ -65,32 +65,4 @@
     &__center {
         align-self: center;
     }
-
-    .badge {
-        padding: .3rem .7rem;
-        font-size: 1.2rem;
-        display: inline-flex;
-        align-self: flex-start;
-        border-radius: $radius-full;
-
-        &__green {
-            background-color: rgba(16, 185, 128, .15);
-            color: var(--color-success);
-        }
-
-        &__primary {
-            background: rgba(124, 58, 237, 0.12);
-            color: var(--color-primary);
-        }
-
-        &__blue {
-            background: rgba(59, 130, 246, 0.15);
-            color: var(--color-info);
-        }
-
-        &__orage {
-            background: rgba(245, 158, 11, 0.18);
-            color: var(--color-warning);
-        }
-    }
 }
