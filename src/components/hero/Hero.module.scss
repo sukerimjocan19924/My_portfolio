@@ -2,6 +2,7 @@
 
 .hero {
     background-color: var(--color-bg-muted);
+    border-bottom: 1.5px solid var(--color-border);
 
     .inner {
         padding: $space-8_1 0;
