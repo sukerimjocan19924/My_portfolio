@@ -1,0 +1,73 @@
+@use 'variables' as *;
+@use 'themes';
+@use 'buttons';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $font-sans;
+  -webkit-font-smoothing: antialiased;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: $transition-theme;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol, dl {
+  list-style-type: none;
+}
+
+.inner {
+  max-width: 120rem;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+
+  @media (max-width: 1200px) {
+    padding-left: $space-2 !important;
+    padding-right: $space-2 !important;
+  }
+}
+
+h1.tit {
+  font-size: clamp(5rem, 4vw, 8.4rem);
+  line-height: 1.214;
+
+  &__m {
+    font-size: clamp(3.8rem, 4.5vw, 5.2rem);
+  }
+}
+
+p.txt {
+  margin: 0;
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+}
+
+h3.card-tit {
+  margin-bottom: .8rem;
+  font-size: 1.6rem;
+  color: var(--color-text);
+}

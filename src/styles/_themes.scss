@@ -1,0 +1,179 @@
+@use 'variables' as *;
+
+:root {
+  color-scheme: light;
+
+  // Background
+  --color-bg: #ffffff;
+  --color-bg-muted: #fffafa;   // 메인 BG
+  --color-card-bg: #f5f0f0;    // 카드/푸터 BG
+  --color-header-bg: FFFAFA;
+
+  // Text
+  --color-text: #1a1a1a; // 기본 텍스트
+  --color-text-muted: #AAAAAA; // 보조 텍스트
+  --color-text-tertiary: #888888;
+  --color-text-disabled: #cccccc;
+
+  // Border / Divider
+  --color-border: #e0d6d6; // 메인 보더
+  --color-border-card: #e8dede;
+  --color-border-sub: #ddcfcf;
+  --color-border-red: #ffd5d5;
+
+  // Primary (Red Series)
+  --color-primary: #ff2d2d; // 브랜드 레드
+  --color-primary-deep: #e22828; // 딥 레드
+  --color-primary-light: #fff6f6; // 라이트 레드
+  --color-primary-hover: #d32f2f;
+
+  // Accent / Badge
+  --color-icon-bg: #fff0f0;
+  --color-badge-bg: #eecece;
+
+  // 상태 색상
+  --color-success: #22c55e;
+  --color-info: #0ea5e9;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  // 버튼
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-text: #ffffff;
+  --btn-outline-border: var(--color-border);
+  --btn-outline-text: var(--color-text);
+
+  // Shadow
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+
+  // themeNavBtn
+  --theme-color-text-facus: #000000;
+  --theme-color-bg-facus: #FFFFFF;
+  --theme-color-border-facus: #CCBBBB;
+
+  // themeNavBtnContact
+  --theme-color-text-contact: #ffffff;
+  --theme-color-bg-contact: #FF9393;
+  --theme-color-bg-contact-facus: #FF2D2D;
+
+  // themeToggleBtn
+  --theme-color-bg: #FFF0F0;
+  --theme-color-border: #E0D6D6;
+  --theme-color-bg-hover: #FF7676;
+  --theme-color-border-hover: #FFFFFF;
+
+  // themeCaption
+  --theme-color-circle-bg: #FFA6A6;
+  --theme-color-circle: #FF2D2D;
+  --theme-color-caption-bg: #ffffff;
+  --theme-color-caption-border: #ffffff;
+
+  // mascot
+  --mascot-body: #ffffff;
+  --mascot-border: #E0D6D6;
+  --mascot-accent: #EEECE6;
+  --mascot-horn: #FF2D2D;
+  --mascot-eye: #333333;
+  --mascot-eye-highlight: #ffffff;
+  --mascot-nose: #FF2D2D;
+  --mascot-tail: #FF2D2D;
+  --mascot-color-card-bg: #f5f0f0;
+  --mascot-opacity-horn1: 0.3;
+  --mascot-opacity-horn2: 0.2;
+  --mascot-opacity-horn3: 0.15;
+  --mascot-opacity-horn4: 0.25;
+
+  // herobutton
+  --btn-hero-text: #888888;
+  --btn-hero-border: #DDCFCF;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  // Background
+  --color-bg: #0a0a0a;
+  --color-bg-muted: #111111;
+  --color-card-bg: #1a1a1a;
+  --color-header-bg: rgba(15, 15, 15, 0.9);
+
+  // Text
+  --color-text: #ffffff;
+  --color-text-muted: #555555;
+  --color-text-tertiary: #777777;
+  --color-text-disabled: #555555;
+
+  // Border / Divider
+  --color-border: #2a2a2a;
+  --color-border-card: #333333;
+  --color-border-sub: #555555;
+  --color-border-red: #ffd5d5;
+
+  // Primary (Red Series)
+  --color-primary: #E22828;
+  --color-primary-deep: #e22828;
+  --color-primary-light: #fff6f6;
+  --color-primary-hover: #cc2020;
+
+  // Accent / Badge
+  --color-icon-bg: #1e1e1e;
+  --color-badge-bg: #2a2a2a;
+
+  // 상태 색상
+  --color-success: #22c55e;
+  --color-info: #0ea5e9;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  --btn-outline-border: var(--color-border);
+  --btn-outline-text: var(--color-text);
+
+  // Shadow
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+
+
+  // themeNavBtn
+  --theme-color-text-facus: #FFFFFF;
+  --theme-color-bg-facus: #1A1A1A;
+  --theme-color-border-facus: #333333;
+
+
+  // themeNavBtnContact
+  --theme-color-text-contact: #E6E6E6;
+  --theme-color-bg-contact: #761919;
+  --theme-color-bg-contact-facus: #E22828;
+
+  // themeToggleBtn
+  --theme-color-bg: #1A1A1A;
+  --theme-color-border: #1e1e1e;
+  --theme-color-bg-hover: #5C5C5C;
+  --theme-color-border-hover: #FFFFFF;
+
+  // themeCaption
+  --theme-color-circle-bg: #FF2D2D;
+  --theme-color-circle: #CC2020;
+  --theme-color-caption-bg: #111111;
+  --theme-color-caption-border: #1E1E1E;
+
+  // mascot
+  --mascot-body: #1A1A1A;
+  --mascot-border: #2A2A2A;
+  --mascot-accent: #111111;
+  --mascot-horn: #CC2020;
+  --mascot-eye: #0A0A0A;
+  --mascot-eye-highlight: #FFFFFF;
+  --mascot-nose: #FF2D2D;
+  --mascot-tail: #FF2D2D;
+  --mascot-color-card-bg: #131313;
+  --mascot-opacity-horn1: 0.3;
+  --mascot-opacity-horn2: 0.4;
+  --mascot-opacity-horn3: 0.3;
+  --mascot-opacity-horn4: 0.2;
+
+  // herobutton
+  --btn-hero-text: #AAAAAA;
+  --btn-hero-border: #2A2A2A;
+}

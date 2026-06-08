@@ -1,0 +1,102 @@
+@use '../../styles/variables' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: var(--color-header-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1.5px solid var(--color-border);
+    padding: $space-2 0;
+
+    .inner {
+        max-width: 120rem;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        .logo {
+            font-size: $font-size-lg;
+            text-transform: uppercase;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            gap: $space-3;
+            // color: var(--color-text)
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: $space-9;
+            // flex: 1;
+
+            .link {
+                color: var(--color-text-muted);
+                font-size: $font-size-md;
+                display: block;
+                font-weight: 500;
+
+                &:hover {
+                    color: var(--color-text);
+                }
+            }
+
+            .contactLink {
+                color: var(--theme-color-text-contact); // 레드 포인트
+                // border: 1px solid var(--color-primary);
+                border-radius: .6rem;
+                background-color: var(--theme-color-bg-contact);
+                font-weight: 700;
+                padding: .6rem 1.4rem;
+                transition: background-color 0.2s ease;
+
+                &:hover {
+                    color: $color-bg;
+                    background-color: var(--theme-color-bg-contact-facus);
+                }
+            }
+            
+            .linkActive {
+                color: var(--theme-color-text-facus);
+                border: 1px solid var(--theme-color-border-facus);
+                border-radius: .6rem;
+                background-color: var(--theme-color-bg-facus);
+                padding: .6rem 1.4rem;
+            }
+
+            .linkContactActive {
+                color: $color-bg;
+                background-color: var(--theme-color-bg-contact-facus);
+            }
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            gap: 2.7rem;
+
+            button {
+                border-radius: $radius-full;
+                padding: 1rem;
+
+                svg {
+                    display: block;
+                }
+            }
+
+            .themeToggle {
+                border: 1px solid var(--theme-color-border);
+                background-color: var(--theme-color-bg);
+                
+                &:hover {
+                    border: 1px solid var(--theme-color-border-hover);
+                    background-color: var(--theme-color-bg-hover);
+                    box-shadow: $shadow-md;
+                }
+            }
+        }
+    }
+}
