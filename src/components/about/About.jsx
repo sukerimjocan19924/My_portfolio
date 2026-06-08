@@ -13,12 +13,12 @@ const About = () => {
           <div className={styles.left}>
             <div className={styles.card} aria-label="자기소개 카드">
               <div className={styles.quote} aria-label="quote">
-                "창의성과 <br /> 논리가 <br /> 만나는 곳"
+                "창의성과 논리가 만나는 곳"
               </div>
 
               <div className={styles.identity}>
                 홍석란<br />
-                UI/UX Designer & Frontend Developer
+                UI/UX Designer & Fullstack Developer
               </div>
             </div>
 

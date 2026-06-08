@@ -5,46 +5,46 @@
   border-bottom: 1.5px solid var(--color-border);
 
   .inner {
-    padding: $space-8_1 0;
+    padding: $space-6 0;
 
     .cardHeader {
       display: inline-flex;
       align-items: center;
-      margin-bottom: 7.2rem;
+      margin-bottom: $space-6;
       padding-left: $space-3-1;
       border-left: 0.6rem solid var(--color-primary);
-      line-height: 3rem;
+      line-height: 2.8rem;
       color: var(--color-primary);
-      font-size: $font-size-lg;
+      font-size: clamp($font-size-md, 1.8vw, $font-size-lg);
       font-weight: 600;
     }
 
     .content {
       display: grid;
-      grid-template-columns: 40rem 1fr;
-      gap: clamp(4rem, 8vw, 10.8rem);
+      grid-template-columns: 44rem 1fr;
+      gap: clamp($space-4, 6vw, $space-10);
       align-items: flex-start;
 
       .left {
         display: flex;
         flex-direction: column;
-        gap: $space-9;
+        gap: $space-5;
 
         .card {
           background-color: var(--color-bg);
           border-top: 0.15rem solid var(--color-primary);
           border-left: .6rem solid var(--color-primary);
           border-radius: $radius-smsm;
-          padding: $space-5_1;
+          padding: $space-4;
           display: flex;
           flex-direction: column;
-          gap: $space-4;
+          gap: $space-3;
           box-shadow: $shadow-2lg;
           transition: $transition-theme;
 
           .quote {
-            font-size: $font-size-4xl;
-            font-weight: 800;
+            font-size: clamp($font-size-xl, 2.5vw, $font-size-3xl);
+            font-weight: 700;
             color: var(--color-text);
             word-break: keep-all;
           }
@@ -52,11 +52,11 @@
           .identity {
             display: flex;
             flex-direction: column;
-            padding-top: $space-4;
-            border-top: 0.15rem solid var(--color-border-card);
-            font-size: $font-size-xl;
+            padding-top: $space-3;
+            border-top: 0.15rem solid $color-border-card;
+            font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
             font-weight: 400;
-            color: var(--color-text-tertiary);
+            color: $color-text-tertiary;
           }
         }
 
@@ -67,9 +67,9 @@
           .infoRow {
             display: flex;
             flex-direction: column;
-            gap: 0.15rem;
-            padding: $space-4-1 0;
-            border-bottom: 0.15rem solid var(--color-border);
+            gap: 0.1rem;
+            padding: $space-2 0;
+            border-bottom: 0.15rem solid $color-border-sub;
 
             &:first-child {
               padding-top: 0;
@@ -81,14 +81,14 @@
             }
 
             .infoKey {
-              font-size: $font-size-md;
+              font-size: clamp($font-size-sm, 1.4vw, $font-size-md);
               font-weight: 400;
-              color: var(--color-primary);
+              color: $color-primary;
             }
 
             .infoVal {
-              font-size: $font-size-2xl;
-              color: var(--color-text);
+              font-size: clamp($font-size-lg, 2vw, $font-size-2xl);
+              color: $color-text;
               font-weight: 600;
             }
           }
@@ -98,33 +98,33 @@
       .right {
         display: flex;
         flex-direction: column;
-        gap: $space-5_1;
+        gap: $space-4;
 
         .lead {
-          font-size: $font-size-3_1xl;
+          font-size: clamp($font-size-lg, 2vw, $font-size-2_1xl);
           font-weight: 300;
-          line-height: 1.6;
-          color: var(--color-text);
+          line-height: 1.55;
+          color: $color-text;
           word-break: keep-all;
-          padding-bottom: $space-5_1;
-          margin: 0.15px;
-          border-bottom: 0.15rem solid var(--theme-color-border);
+          padding-bottom: $space-3;
+          margin: 0.1rem;
+          border-bottom: 0.15rem solid $color-border-main;
         }
 
         .paragraph {
-          font-size: $font-size-2_1xl;
-          line-height: 1.55;
-          color: var(--color-text-tertiary);
+          font-size: clamp($font-size-md, 1.8vw, $font-size-xl);
+          line-height: 1.5;
+          color: $color-text-tertiary;
           word-break: keep-all;
         }
 
         .keywords {
           display: flex;
           flex-direction: column;
-          gap: $space-3;
+          gap: $space-2;
 
           strong {
-            font-size: $font-size-md;
+            font-size: clamp($font-size-sm, 1.4vw, $font-size-md);
             color: var(--color-text-muted);
           }
 
@@ -134,22 +134,22 @@
             gap: $space-2;
 
             li {
-              font-size: $font-size-xl;
+              font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
               font-weight: 500;
-              padding: $space-1_1 $space-4;
+              padding: $space-1 $space-3;
               border-radius: $radius-sssm;
               transition: border-color 0.2s ease, color 0.2s ease;
               background-color: transparent;
               color: var(--btn-hero-text);
-              border: 0.1rem solid var(--color-border);
+              border: 0.1rem solid $color-border-sub;
 
               &:hover {
-                border-color: var(--color-primary);
-                color: var(--color-primary);
+                border-color: $color-primary;
+                color: $color-primary;
               }
 
               &:first-child {
-                background-color: var(--color-primary);
+                background-color: $color-primary;
                 color: $color-bg;
                 border: none;
               }
