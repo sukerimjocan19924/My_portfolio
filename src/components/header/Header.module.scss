@@ -4,7 +4,7 @@
     position: sticky;
     top: 0;
     z-index: 5;
-    background-color: var(--color-header-bg);
+    background-color: rgba(var(--color-header-bg), 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1.5px solid var(--color-border);
     padding: $space-2 0;
@@ -24,7 +24,7 @@
             align-items: center;
             flex-shrink: 0;
             gap: $space-3;
-            // color: var(--color-text)
+            // color: var(--color-text);
         }
 
         .nav {

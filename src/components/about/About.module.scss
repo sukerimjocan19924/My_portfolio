@@ -53,10 +53,10 @@
             display: flex;
             flex-direction: column;
             padding-top: $space-3;
-            border-top: 0.15rem solid $color-border-card;
+            border-top: 0.15rem solid var(--color-tool-card-border3);
             font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
             font-weight: 400;
-            color: $color-text-tertiary;
+            color: var(--color-text-tertiary);
           }
         }
 
@@ -69,7 +69,7 @@
             flex-direction: column;
             gap: 0.1rem;
             padding: $space-2 0;
-            border-bottom: 0.15rem solid $color-border-sub;
+            border-bottom: 0.15rem solid var(--color-tool-card-border2);
 
             &:first-child {
               padding-top: 0;
@@ -88,7 +88,7 @@
 
             .infoVal {
               font-size: clamp($font-size-lg, 2vw, $font-size-2xl);
-              color: $color-text;
+              color: var(--color-text);
               font-weight: 600;
             }
           }
@@ -104,17 +104,17 @@
           font-size: clamp($font-size-lg, 2vw, $font-size-2_1xl);
           font-weight: 300;
           line-height: 1.55;
-          color: $color-text;
+          color: var(--color-text);
           word-break: keep-all;
           padding-bottom: $space-3;
           margin: 0.1rem;
-          border-bottom: 0.15rem solid $color-border-main;
+          border-bottom: 0.15rem solid var(--theme-color-border);
         }
 
         .paragraph {
           font-size: clamp($font-size-md, 1.8vw, $font-size-xl);
           line-height: 1.5;
-          color: $color-text-tertiary;
+          color: var(--color-text-tertiary);
           word-break: keep-all;
         }
 
@@ -141,15 +141,15 @@
               transition: border-color 0.2s ease, color 0.2s ease;
               background-color: transparent;
               color: var(--btn-hero-text);
-              border: 0.1rem solid $color-border-sub;
+              border: 0.1rem solid var(--btn-hero-border);
 
               &:hover {
-                border-color: $color-primary;
-                color: $color-primary;
+                border-color: var(--color-primary);
+                color: var(--color-primary);
               }
 
               &:first-child {
-                background-color: $color-primary;
+                background-color: var(--color-primary);
                 color: $color-bg;
                 border: none;
               }
