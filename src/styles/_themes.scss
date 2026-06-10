@@ -7,7 +7,9 @@
   --color-bg: #ffffff;
   --color-bg-muted: #fffafa;   // 메인 BG
   --color-card-bg: #f5f0f0;    // 카드/푸터 BG
-  --color-header-bg: FFFAFA;
+  --color-tool-bg: #ffffff;
+  --color-tool-card-bg: #fffafa;
+  --color-header-bg: #FFFAFA;
 
   // Text
   --color-text: #1a1a1a; // 기본 텍스트
@@ -18,6 +20,9 @@
   // Border / Divider
   --color-border: #e0d6d6; // 메인 보더
   --color-border-card: #e8dede;
+  --color-tool-card-border: #e8dede;
+  --color-tool-card-border2: #e0d6d6;
+  --color-tool-card-border3: #eeece6;
   --color-border-sub: #ddcfcf;
   --color-border-red: #ffd5d5;
 
@@ -29,6 +34,7 @@
 
   // Accent / Badge
   --color-icon-bg: #fff0f0;
+  --color-icon-border: #e8dede;
   --color-badge-bg: #eecece;
 
   // 상태 색상
@@ -84,6 +90,14 @@
   --mascot-opacity-horn3: 0.15;
   --mascot-opacity-horn4: 0.25;
 
+  // miniMascot
+  --mini-mascot1-body: #FFFFFF;
+  --mini-mascot2-body: #FFFFFF;
+  --mini-mascot1-border: #2A2A2A;
+  --mini-mascot2-border: #E0D6D6;
+  --mini-mascot1-eye: #0A0A0A;
+  --mini-mascot2-eye: #333333;
+
   // herobutton
   --btn-hero-text: #888888;
   --btn-hero-border: #DDCFCF;
@@ -96,7 +110,9 @@
   --color-bg: #0a0a0a;
   --color-bg-muted: #111111;
   --color-card-bg: #1a1a1a;
-  --color-header-bg: rgba(15, 15, 15, 0.9);
+  --color-tool-bg: #111111;
+  --color-tool-card-bg: #0a0a0a;
+  --color-header-bg: #0f0f0f;
 
   // Text
   --color-text: #ffffff;
@@ -107,6 +123,9 @@
   // Border / Divider
   --color-border: #2a2a2a;
   --color-border-card: #333333;
+  --color-tool-card-border: #1a1a1a;
+  --color-tool-card-border2: #2a2a2a;
+  --color-tool-card-border3: #2a2a2a;
   --color-border-sub: #555555;
   --color-border-red: #ffd5d5;
 
@@ -118,6 +137,7 @@
 
   // Accent / Badge
   --color-icon-bg: #1e1e1e;
+  --color-icon-border: #1e1e1e;
   --color-badge-bg: #2a2a2a;
 
   // 상태 색상
@@ -172,6 +192,14 @@
   --mascot-opacity-horn2: 0.4;
   --mascot-opacity-horn3: 0.3;
   --mascot-opacity-horn4: 0.2;
+
+  // miniMascot
+  --mini-mascot1-body: #2A2A2A;
+  --mini-mascot2-body: #1A1A1A;
+  --mini-mascot1-border: #E0DDD6;
+  --mini-mascot2-border: #2A2A2A;
+  --mini-mascot1-eye: #333333;
+  --mini-mascot2-eye: #0A0A0A;
 
   // herobutton
   --btn-hero-text: #AAAAAA;
