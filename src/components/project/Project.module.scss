@@ -1,0 +1,159 @@
+@use '../../styles/variables' as *;
+
+.project {
+  background-color: var(--color-tool-bg);
+  border-bottom: 1.5px solid var(--color-border);
+  transition: $transition-theme;
+
+  .inner {
+    padding: $space-6 0;
+
+    .cardHeader {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: $space-3;
+      padding-left: $space-3-1;
+      border-left: 0.6rem solid var(--color-primary);
+      line-height: 2.8rem;
+      color: var(--color-primary);
+      font-size: clamp($font-size-md, 1.8vw, $font-size-lg);
+      font-weight: 600;
+    }
+
+    .mainSection {
+      margin-bottom: $space-8;
+
+      .sectionHead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $space-6;
+
+        .title {
+          font-size: clamp($font-size-xl, 2.5vw, $font-size-3xl);
+          font-weight: 700;
+          color: var(--color-text);
+        }
+
+        .viewAll {
+          display: inline-flex;
+          align-items: center;
+          gap: $space-0;
+          font-size: $font-size-md;
+          font-weight: 400;
+          color: var(--color-text-tertiary);
+          background: none;
+          border: 0.15rem solid var(--color-border);
+          border-radius: $radius-sssm;
+          padding: $space-0 $space-3;
+          cursor: pointer;
+          transition: $transition-theme;
+
+          svg {
+            width: $font-size-md;
+            height: $font-size-md;
+          }
+
+          &:hover {
+            border-color: var(--color-btn-text-hover);
+            color: var(--color-btn-text-hover);
+          }
+        }
+      }
+
+      .mainGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $space-5_1;
+      }
+    }
+
+    .miniSection {
+      .sectionHead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $space-5-1-1;
+
+        .miniTitle {
+          display: flex;
+          align-items: center;
+          gap: $space-3;
+
+          .tit {
+            font-size: clamp($font-size-lg, 2vw, $font-size-2xl);
+            font-weight: 600;
+            color: var(--color-text);
+
+            span.dot {
+              color: var(--color-primary);
+            }
+          }
+
+          .badge {
+            font-size: $font-size-sm;
+            font-weight: 400;
+            color: var(--color-text-tertiary);
+            background-color: var(--color-mini-hover-bg);
+            border: 0.15rem solid var(--color-border);
+            border-radius: $radius-sssm;
+            padding: 0.3rem $space-2;
+          }
+        }
+
+        .viewAllSub {
+          display: inline-flex;
+          align-items: center;
+          gap: $space-0;
+          font-size: clamp($font-size-sm, 1.6vw, $font-size-md);
+          color: var(--color-text-muted);
+          background: none;
+          border: none;
+          cursor: pointer;
+          transition: color 0.2s ease;
+
+          svg {
+            width: clamp($font-size-sm, 1.6vw, $font-size-md);
+            height: clamp($font-size-sm, 1.6vw, $font-size-md);
+          }
+
+          &:hover {
+            color: var(--color-btn-text-hover);
+          }
+
+        }
+      }
+
+      .miniGrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) auto;
+        gap: $space-4;
+        align-items: stretch;
+        margin-right: $space-12_1;
+
+        .moreCard {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: $space-0;
+          border: 0.15rem solid var(--btn-hero-border);
+          border-radius: $radius-smsm;
+          padding: $space-4;
+          max-height: 9.5rem;
+
+          span:first-child {
+            font-size: clamp($font-size-2xl, 2.5vw, $font-size-3_1xl);
+            font-weight: 700;
+            color: var(--color-primary);
+          }
+
+          .moreLabel {
+            font-size: $font-size-sm;
+            color: var(--color-text-muted);
+          }
+        }
+      }
+    }
+  }
+}

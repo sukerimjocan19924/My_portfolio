@@ -101,6 +101,18 @@
   // herobutton
   --btn-hero-text: #888888;
   --btn-hero-border: #DDCFCF;
+
+  //projectbutton
+  --color-hover-bg: #d0bfbf;
+  --color-mini-hover-bg: #EEECE6;
+  --color-btn-text-hover: #666666;
+  --color-btn-text-link: #FF6F6F;
+  --color-btn-border-link: #FFD5D5;
+  --color-btn-mini-text-hover: #FF6F6F;
+  --color-btn-mini-dorder-hover: #FF2D2D;
+  --color-tag-border: #ddcfcf;
+  --color-category-bg: #FF7C7C;
+  --color-figma-bg: #fffafa;
 }
 
 [data-theme='dark'] {
@@ -204,4 +216,16 @@
   // herobutton
   --btn-hero-text: #AAAAAA;
   --btn-hero-border: #2A2A2A;
+
+  //projectbutton
+  --color-hover-bg: #444444;
+  --color-mini-hover-bg: #1a1a1a;
+  --color-btn-text-hover: #999999;
+  --color-btn-text-link: #777777;
+  --color-btn-border-link: #2A2A2A;
+  --color-btn-mini-text-hover: #999999;
+  --color-btn-mini-dorder-hover: #888888;
+  --color-tag-border: #2a2a2a;
+  --color-category-bg: #D1A3A3;
+  --color-figma-bg: #1a1aa1a;
 }

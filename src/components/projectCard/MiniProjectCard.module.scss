@@ -1,0 +1,59 @@
+@use '../../styles/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+  background-color: var(--color-bg);
+  border: 0.15rem solid var(--color-border-card);
+  border-radius: $radius-smsm;
+  padding: $space-3;
+  transition: $transition-theme;
+
+  &:hover {
+    box-shadow: $shadow-2lg;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: $space-0;
+
+    .title {
+      font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .desc {
+      font-size: $font-size-sm;
+      color: var(--color-text-muted);
+      word-break: keep-all;
+    }
+  }
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-0;
+    font-size: $font-size-sm;
+    font-weight: 300;
+    color: var(--color-btn-text-link);
+    border: 0.15px solid var(--color-btn-border-link);
+    border-radius: $radius-sssm;
+    margin-top: auto;
+    padding: $space-0 $space-2;
+    align-self: flex-start;
+    width: fit-content;
+
+    &:hover {
+      color: var(--color-btn-mini-text-hover);
+      border-color: var(--color-btn-mini-dorder-hover);
+    }
+
+    svg {
+      width: $font-size-sm;
+      height: $font-size-sm;
+    }
+  }
+}

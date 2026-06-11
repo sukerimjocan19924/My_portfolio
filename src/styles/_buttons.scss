@@ -8,15 +8,26 @@
     font-weight: 600;
 
     &__outline {
-        border: 1px solid var(--btn-hero-border);
-        background-color: transparent;
+        border: 1px solid var(--btn-outline-border);
+        background-color: var(--color-figma-bg);
         color: var(--btn-hero-text);
+
+        &:hover {
+            background-color: var(--color-hover-bg);
+            color: var(--color-btn-text-hover);
+            border-color: var(--color-btn-border-link);
+        }
     }
 
     &__primary {
         border: none;
-        background-color: var(--btn-primary-bg);
+        background-color: var(--color-primary);
         color: var(--btn-primary-text);
+
+        &:hover {
+            background-color: var(--color-primary-hover);
+            color: var(--btn-primary-text-hover, #fff);
+        }
     }
 
     &__small {
@@ -24,8 +35,8 @@
     }
 
     &__md {
-        font-size: 1.3rem;
-        border-radius: $radius-sm;
+        font-size: $font-size-md;
+        border-radius: $radius-sssm;
     }
 
     &__ghost {
