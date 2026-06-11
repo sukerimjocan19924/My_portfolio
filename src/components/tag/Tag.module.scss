@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: $space-0 $space-2;
+    border-radius: $radius-sssm;
+    font-size: $font-size-sm;
+    color: var(--btn-hero-text);
+    border: 0.15rem solid var(--color-tag-border);
+}
+
+.variant_neutral:hover {
+    border-color: rgba(255, 124, 124, 0.5);
+    color: var(--color-primary);
+}
+
+.variant_success:hover {
+    border-color: rgba(16, 185, 129, .5);
+    color: var(--color-success);
+}
+
+.variant_info:hover {
+    border-color: rgba(59, 130, 246, .5);
+    color: var(--color-info);
+}
+
+.variant_warning:hover {
+    border-color: rgba(245, 159, 11, 0.5);
+    color: var(--color-warning);
+}

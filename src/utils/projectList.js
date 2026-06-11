@@ -1,0 +1,329 @@
+// ── 카테고리 필터 (전체 / Web App / E-Commerce / Branding / Dashboard / 미니프로젝트) ──
+export const projectFilters = [
+    { id: 'all', label: '전체' },
+    { id: 'web', label: 'Web App' },
+    { id: 'ecommerce', label: 'E-Commerce' },
+    { id: 'branding', label: 'Branding' },
+    { id: 'dashboard', label: 'Dashboard' },
+    { id: 'mini', label: '미니프로젝트' },
+]
+
+// ── 전체 프로젝트 데이터 ──
+// 모든 항목은 동일한 "풀 카드" 형태(image, tags, demo/code 링크)를 가집니다.
+// - featured: true  → Home "주요 프로젝트" 3개에 노출
+// - categories에 'mini' 포함 → Projects 페이지 "미니프로젝트" 탭에 노출
+// - showOnHome: true → Home "미니 프로젝트" 섹션에 노출 (MiniProjectCard, 일부 필드만 사용)
+export const projectsPageItems = [
+    {
+        id: 'project-alpha',
+        categories: ['ecommerce'],
+        featured: true,
+        title: 'E-Commerce 플랫폼 리디자인',
+        description: '사용자 중심의 UI로 재구성한 쇼핑몰 플랫폼 리디자인 프로젝트',
+        tags: [
+            { label: 'React', variant: 'neutral' },
+            { label: 'Figma', variant: 'info' },
+            { label: 'Scss', variant: 'neutral' },
+        ],
+        image: '/images/projects/project-alpha.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '사이트 보기',
+        codeLabel: '디자인',
+    },
+    {
+        id: 'project-beta',
+        categories: ['web'],
+        featured: true,
+        title: 'Memory 캘린더 플랫폼',
+        description: '사진과 데이터를 날짜별로 기록하고 추억을 저장하는 Memory 캘린더 플랫폼',
+        tags: [
+            { label: 'React', variant: 'neutral' },
+            { label: 'TypeScript', variant: 'info' },
+            { label: 'S3', variant: 'warning' },
+        ],
+        image: '/images/projects/project-beta.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '사이트 보기',
+        codeLabel: '디자인',
+    },
+    {
+        id: 'project-gamma',
+        categories: ['branding'],
+        featured: true,
+        title: '헬스케어 모바일 앱',
+        description: 'AI 기반 개인화 건강 관리 앱, UX 설계부터 개발까지 진행',
+        tags: [
+            { label: 'React Native', variant: 'neutral' },
+            { label: 'TensorFlow', variant: 'info' },
+            { label: 'Figma', variant: 'success' },
+        ],
+        image: '/images/projects/project-gamma.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '사이트 보기',
+        codeLabel: '디자인',
+    },
+
+    // ── Web App / E-Commerce 추가 항목 ──
+    {
+        id: 'project-delta',
+        categories: ['web'],
+        featured: false,
+        title: 'Memory 캘린더 플랫폼 v2',
+        description: '실시간 공유 기능을 추가한 Memory 캘린더 플랫폼 개선 버전',
+        tags: [
+            { label: 'React', variant: 'neutral' },
+            { label: 'TypeScript', variant: 'info' },
+            { label: 'AWS', variant: 'success' },
+        ],
+        image: '/images/projects/project-delta.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '사이트 보기',
+        codeLabel: '디자인',
+    },
+    {
+        id: 'project-epsilon',
+        categories: ['ecommerce'],
+        featured: false,
+        title: 'E-Commerce 챗봇 리디자인',
+        description: '고객 문의 응대를 자동화한 이커머스 챗봇 UI/UX 리디자인',
+        tags: [
+            { label: 'React', variant: 'neutral' },
+            { label: 'Pages', variant: 'info' },
+            { label: 'Scss', variant: 'neutral' },
+        ],
+        image: '/images/projects/project-epsilon.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '사이트 보기',
+        codeLabel: '디자인',
+    },
+    {
+        id: 'project-zeta',
+        categories: ['web'],
+        featured: false,
+        title: '음식 추천 앱',
+        description: '취향 기반 음식점 추천과 리뷰를 제공하는 모바일 웹 앱',
+        tags: [
+            { label: 'React Native', variant: 'neutral' },
+            { label: 'Expo', variant: 'info' },
+            { label: 'Figma', variant: 'success' },
+        ],
+        image: '/images/projects/project-zeta.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '사이트 보기',
+        codeLabel: '디자인',
+    },
+
+    // ── Dashboard 추가 항목 ──
+    {
+        id: 'project-eta',
+        categories: ['dashboard'],
+        featured: false,
+        title: '어드민 대시보드 시스템',
+        description: '실시간 데이터 시각화와 권한 관리를 지원하는 어드민 대시보드',
+        tags: [
+            { label: 'Nextjs', variant: 'neutral' },
+            { label: 'Chart.js', variant: 'info' },
+            { label: 'Node.js', variant: 'success' },
+        ],
+        image: '/images/projects/project-eta.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '사이트 보기',
+        codeLabel: '디자인',
+    },
+    {
+        id: 'project-theta',
+        categories: ['dashboard'],
+        featured: false,
+        title: '어드민 대시보드 시스템 v2',
+        description: '커스터마이징 가능한 위젯 기반 어드민 대시보드 개선판',
+        tags: [
+            { label: 'React', variant: 'neutral' },
+            { label: 'D3', variant: 'info' },
+            { label: 'TypeScript', variant: 'warning' },
+        ],
+        image: '/images/projects/project-theta.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '사이트 보기',
+        codeLabel: '디자인',
+    },
+    {
+        id: 'project-iota',
+        categories: ['web'],
+        featured: false,
+        title: '소셜 피드 플랫폼',
+        description: '실시간 알림과 무한 스크롤을 적용한 소셜 피드 플랫폼',
+        tags: [
+            { label: 'React', variant: 'neutral' },
+            { label: 'Firebase', variant: 'info' },
+            { label: 'Figma', variant: 'success' },
+        ],
+        image: '/images/projects/project-iota.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '사이트 보기',
+        codeLabel: '디자인',
+    },
+
+    // ── 미니 프로젝트 (categories에 'mini' 포함, 풀 카드 + 일부는 Home 노출) ──
+    {
+        id: 'mini-timer',
+        categories: ['mini'],
+        featured: false,
+        showOnHome: true,
+        title: 'Timer',
+        description: '뽀모도로 타이머 앱',
+        tags: [{ label: 'HTML/CSS', variant: 'neutral' }],
+        image: '/images/projects/mini-timer.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '보기',
+        codeLabel: null,
+    },
+    {
+        id: 'mini-weather',
+        categories: ['mini'],
+        featured: false,
+        showOnHome: true,
+        title: '날씨 대시보드',
+        description: 'OpenWeather API 활용한 날씨 정보 앱',
+        tags: [
+            { label: 'React', variant: 'neutral' },
+            { label: 'API', variant: 'info' },
+        ],
+        image: '/images/projects/mini-weather.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '보기',
+        codeLabel: null,
+    },
+    {
+        id: 'mini-wordchain',
+        categories: ['mini'],
+        featured: false,
+        showOnHome: true,
+        title: '끝말잇기',
+        description: '단어 게임 토이 프로젝트',
+        tags: [{ label: 'JavaScript', variant: 'warning' }],
+        image: '/images/projects/mini-wordchain.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '보기',
+        codeLabel: null,
+    },
+    {
+        id: 'mini-diary',
+        categories: ['mini'],
+        featured: false,
+        showOnHome: false,
+        title: '광명일기장',
+        description: '로컬스토리지 기반 일기 작성 앱',
+        tags: [{ label: 'React', variant: 'neutral' }],
+        image: '/images/projects/mini-diary.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '보기',
+        codeLabel: null,
+    },
+    {
+        id: 'mini-portfolio-v1',
+        categories: ['mini'],
+        featured: false,
+        showOnHome: false,
+        title: '포트폴리오 v1',
+        description: '첫 번째 포트폴리오 사이트',
+        tags: [
+            { label: 'React', variant: 'neutral' },
+            { label: 'SCSS', variant: 'info' },
+        ],
+        image: '/images/projects/mini-portfolio-v1.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '보기',
+        codeLabel: null,
+    },
+    {
+        id: 'mini-exchange',
+        categories: ['mini'],
+        featured: false,
+        showOnHome: true,
+        title: '환율 계산기',
+        description: '실시간 환율 변환기',
+        tags: [
+            { label: 'JavaScript', variant: 'warning' },
+            { label: 'API', variant: 'info' },
+        ],
+        image: '/images/projects/mini-exchange.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '보기',
+        codeLabel: null,
+    },
+    {
+        id: 'mini-quiz',
+        categories: ['mini'],
+        featured: false,
+        showOnHome: true,
+        title: '퀴즈 앱',
+        description: 'Open Trivia DB 활용한 퀴즈 게임',
+        tags: [{ label: 'React', variant: 'neutral' }],
+        image: '/images/projects/mini-quiz.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '보기',
+        codeLabel: null,
+    },
+    {
+        id: 'mini-todo',
+        categories: ['mini'],
+        featured: false,
+        showOnHome: true,
+        title: '투두리스트',
+        description: '드래그 앤 드롭 지원 투두리스트',
+        tags: [{ label: 'React', variant: 'neutral' }],
+        image: '/images/projects/mini-todo.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '보기',
+        codeLabel: null,
+    },
+    {
+        id: 'mini-qr',
+        categories: ['mini'],
+        featured: false,
+        showOnHome: true,
+        title: 'QR 생성기',
+        description: 'URL → QR코드 변환 도구',
+        tags: [{ label: 'JavaScript', variant: 'warning' }],
+        image: '/images/projects/mini-qr.png',
+        demoHref: '#',
+        codeHref: 'https://github.com',
+        demoLabel: '보기',
+        codeLabel: null,
+    },
+]
+
+// ── 헬퍼 ──────────────────────────────────
+
+// Home "주요 프로젝트" — featured: true 인 것 (최대 3개)
+export const mainProjectList = projectsPageItems
+    .filter((p) => p.featured)
+    .slice(0, 3)
+
+// Home "미니 프로젝트" — showOnHome: true 인 것
+export const miniProjectList = projectsPageItems.filter(
+    (p) => p.categories.includes('mini') && p.showOnHome
+)
+
+// Projects 페이지 — 카테고리 필터링 (전체 포함)
+export const getProjectsByCategory = (categoryId) => {
+    if (categoryId === 'all') return projectsPageItems
+    return projectsPageItems.filter((p) => p.categories.includes(categoryId))
+}
