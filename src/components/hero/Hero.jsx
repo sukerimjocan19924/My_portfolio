@@ -24,8 +24,6 @@ const Hero = () => {
 
             return
         }
-
-        navigate('/projects#preview') // 임시 — 나중에 삭제(+ 나중에 자소서 부분 추가하기)
     }
   }
 

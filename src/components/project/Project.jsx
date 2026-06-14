@@ -24,7 +24,7 @@ const Project = () => {
   }
 
   return (
-    <section className={styles.project} aria-labelledby="project-title">
+    <section className={styles.project} id="project-preview" aria-labelledby="project-title">
       <div className={`inner ${styles.inner}`}>
         <p className={styles.cardHeader}>03 / 나의 프로젝트</p>
 

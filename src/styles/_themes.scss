@@ -31,6 +31,7 @@
   --color-primary-deep: #e22828; // 딥 레드
   --color-primary-light: #fff6f6; // 라이트 레드
   --color-primary-hover: #d32f2f;
+  --color-primary-btn-deep: #e22828;
 
   // Accent / Badge
   --color-icon-bg: #fff0f0;
@@ -102,7 +103,7 @@
   --btn-hero-text: #888888;
   --btn-hero-border: #DDCFCF;
 
-  //projectbutton
+  // projectbutton
   --color-hover-bg: #d0bfbf;
   --color-mini-hover-bg: #EEECE6;
   --color-btn-text-hover: #666666;
@@ -113,6 +114,16 @@
   --color-tag-border: #ddcfcf;
   --color-category-bg: #FF7C7C;
   --color-figma-bg: #fffafa;
+
+  // contact
+  --color-contact-bg: #fff6f6;
+  --color-input-focus: #FF6F6F;
+
+  // footer
+  --color-footer-text: #aaaaaa;
+  --color-footer-bg: #f5f0f0;
+  --btn-toggle-x-bg: #f5f5f5;
+  --btn-toggle-x-text: #f5f5f5;
 }
 
 [data-theme='dark'] {
@@ -146,6 +157,8 @@
   --color-primary-deep: #e22828;
   --color-primary-light: #fff6f6;
   --color-primary-hover: #cc2020;
+  --color-primary-btn-deep: #ff2d2d;
+
 
   // Accent / Badge
   --color-icon-bg: #1e1e1e;
@@ -227,5 +240,15 @@
   --color-btn-mini-dorder-hover: #888888;
   --color-tag-border: #2a2a2a;
   --color-category-bg: #D1A3A3;
-  --color-figma-bg: #1a1aa1a;
+  --color-figma-bg: #1a1a1a;
+
+  // contact
+  --color-contact-bg: #111111;
+  --color-input-focus: #cc2020;
+
+  // footerx
+  --color-footer-text: #333333;
+  --color-footer-bg: #111111;
+  --btn-toggle-x-bg: #1e1e1e;
+  --btn-toggle-x-text: #2a2a2a;
 }
