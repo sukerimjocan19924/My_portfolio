@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+
+.footer {
+    background-color: var(--color-footer-bg);
+    padding: $space-3-1 0;
+
+    .inner {
+        padding: $space-1_1 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-size-md;
+        color: var(--color-footer-text);
+        align-items: center;
+        gap: $space-2;
+
+        .copy {
+            display: flex;
+            align-items: center;
+            gap: $space-2;
+        }
+    }
+}
