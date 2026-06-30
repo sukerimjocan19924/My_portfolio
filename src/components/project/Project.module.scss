@@ -4,6 +4,7 @@
   background-color: var(--color-tool-bg);
   border-bottom: 1.5px solid var(--color-border);
   transition: $transition-theme;
+  padding: 0 $space-2;
 
   .inner {
     padding: $space-6 0;
@@ -63,8 +64,23 @@
 
       .mainGrid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: $space-5_1;
+
+        // 데스크탑 — 3컬럼
+        @media (min-width: 1220px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        // 태블릿 — 3컬럼 유지
+        @media (max-width: 1219px) and (min-width: 600px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        // 모바일 — 1컬럼
+        @media (max-width: 599px) {
+          grid-template-columns: 1fr;
+          gap: $space-3;
+        }
       }
     }
 
@@ -100,36 +116,57 @@
             padding: 0.3rem $space-2;
           }
         }
-
-        .viewAllSub {
-          display: inline-flex;
-          align-items: center;
-          gap: $space-0;
-          font-size: clamp($font-size-sm, 1.6vw, $font-size-md);
-          color: var(--color-text-muted);
-          background: none;
-          border: none;
-          cursor: pointer;
-          transition: color 0.2s ease;
-
-          svg {
-            width: clamp($font-size-sm, 1.6vw, $font-size-md);
-            height: clamp($font-size-sm, 1.6vw, $font-size-md);
-          }
-
-          &:hover {
-            color: var(--color-btn-text-hover);
-          }
-
-        }
       }
 
       .miniGrid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr) auto;
         gap: $space-4;
         align-items: stretch;
-        margin-right: $space-12_1;
+
+        // 데스크탑 — 4컬럼 + 더보기
+        @media (min-width: 1220px) {
+          grid-template-columns: repeat(4, 1fr) auto;
+          margin-right: $space-10;
+        }
+
+        // 태블릿 — 3컬럼 유지
+        @media (max-width: 1219px) and (min-width: 600px) {
+          grid-template-columns: repeat(3, 1fr) auto;
+          margin-right: $space-6;
+        }
+
+        // 모바일 — 1컬럼 (slice로 3개까지만 제한됨)
+        @media (max-width: 599px) {
+          grid-template-columns: 1fr;
+          gap: $space-2;
+          margin-right: 0;
+
+          .card {
+            padding: $space-2;
+            font-size: $font-size-sm;
+
+            .title {
+              font-size: $font-size-sm;
+            }
+
+            .desc {
+              font-size: $font-size-xs;
+            }
+          }
+
+          .moreCard {
+            padding: $space-2;
+            max-height: none;
+
+            span:first-child {
+              font-size: $font-size-lg;
+            }
+
+            .moreLabel {
+              font-size: $font-size-xs;
+            }
+          }
+        }
 
         .moreCard {
           display: flex;
@@ -151,6 +188,10 @@
           .moreLabel {
             font-size: $font-size-sm;
             color: var(--color-text-muted);
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
           }
         }
       }

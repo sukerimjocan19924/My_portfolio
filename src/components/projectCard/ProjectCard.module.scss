@@ -48,6 +48,11 @@
         gap: $space-2;
         padding: $space-3;
 
+        @media (max-width: 899px) and (min-width: 600px) {
+            padding: $space-2;
+            gap: $space-1_1;
+        }
+
         .title {
             font-size: $font-size-lg;
             color: var(--color-text);
@@ -76,6 +81,12 @@
                 align-items: center;
                 gap: $space-2;
 
+                @media (max-width: 899px) and (min-width: 600px) {
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: $space-1_1;
+                }
+
                 a {
                     display: inline-flex;
                     align-items: center;
@@ -84,9 +95,20 @@
                     font-weight: 500;
                     padding: 0.75rem 1.25rem;
 
+                    @media (max-width: 899px) and (min-width: 600px) {
+                        font-size: $font-size-sm;
+                        padding: $space-1 $space-2;
+                        justify-content: center;
+                    }
+
                     svg {
                         width: 18px;
                         height: 18px;
+                        
+                        @media (max-width: 899px) and (min-width: 600px) {
+                            width: 14px;
+                            height: 14px;
+                        }
                     }
                 }
             }
