@@ -4,6 +4,7 @@
     background-color: var(--color-contact-bg);
     border-bottom: 1.5px solid var(--color-border);
     transition: $transition-theme;
+    padding: 0 $space-2;
 
     .inner {
         padding: $space-6 0;
@@ -183,5 +184,53 @@
         align-items: center;
         justify-content: center;
         z-index: 1000;
+    }
+
+    @media (max-width: 599px) {
+        .inner {
+            padding: $space-4 0;
+
+            .mainSection {
+                gap: $space-6;
+
+                .headingbox {
+                    .subtitle {
+                        font-size: $font-size-sm;
+                    }
+                }
+
+                .contactList {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: $space-3;
+                }
+
+                .ctaButtons {
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: $space-2;
+
+                    .primaryBtn {
+                        width: 100%;
+                        justify-content: center;
+                    }
+
+                    .ghostBtn {
+                        background: none;
+                        border: none;
+                        color: var(--color-text-muted);
+                        font-size: $font-size-xs;
+                        font-weight: 400;
+                        text-align: center;
+                        padding: 0;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: var(--color-primary);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
