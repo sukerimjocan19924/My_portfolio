@@ -1,32 +1,45 @@
 import React from "react"
 import styles from './Tools.module.scss'
-import { MiniMascotIcon } from '../../utils/mascotIcon'
 import { MiniMascotIcon2_1, MiniMascotIcon2_2 } from '../../utils/mascotIcon'
 import { categories } from "../../utils/categories"
-import { motion as Motion, scale } from 'framer-motion'
-import { contentVariants, itemVariants, visualVariants } from '../../utils/variants'
-
+import { motion as Motion } from 'framer-motion'
+import { contentVariants, itemVariants } from '../../utils/variants'
 
 const Tools = () => {
   return (
     <section className={styles.tools} aria-labelledby="tools-title">
-      <Motion.div
-        variants={contentVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ amount: 0.3 }}
-        className={`inner ${styles.inner}`}>
-        <Motion.p variants={itemVariants} className={styles.cardHeader}>02 / 나의 능력</Motion.p>
+      <div className={`inner ${styles.inner}`}>
+        <Motion.p
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className={styles.cardHeader}>
+          02 / 나의 능력
+        </Motion.p>
 
         <div className={styles.cardTitle}>
-          <Motion.p variants={itemVariants} className={styles.title} id="tools-title">기술 스택</Motion.p>
-          <Motion.div variants={visualVariants} className={styles.mascotWrapper}>
+          <Motion.p
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className={styles.title}
+            id="tools-title">
+            기술 스택
+          </Motion.p>
+          <div className={styles.mascotWrapper}>
             <MiniMascotIcon2_1 />
             <MiniMascotIcon2_2 />
-          </Motion.div>
+          </div>
         </div>
 
-        <div className={styles.grid}>
+        <Motion.div
+          variants={contentVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          className={styles.grid}>
           {categories.map((cat) => (
             <Motion.div variants={itemVariants} key={cat.id} className={styles.card}>
               <div className={styles.cardTop}>
@@ -54,8 +67,8 @@ const Tools = () => {
               </ul>
             </Motion.div>
           ))}
-        </div>
-      </Motion.div>
+        </Motion.div>
+      </div>
     </section>
   )
 }

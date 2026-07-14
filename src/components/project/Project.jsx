@@ -5,7 +5,7 @@ import { ArrowIcon, ArrowMiniIcon } from '../../utils/projectIcon'
 import { mainProjectList, miniProjectList, getProjectsByCategory } from '../../utils/projectList'
 import ProjectCard from '../projectCard/ProjectCard'
 import MiniProjectCard from '../projectCard/MiniProjectCard'
-import { motion as Motion, scale } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { contentVariants, itemVariants } from '../../utils/variants'
 
 const Project = () => {
@@ -30,31 +30,36 @@ const Project = () => {
 
   const navigate = useNavigate()
 
-  const handleProjectsClick = () => {
-    navigate('/projects')
-  }
-
-  const handleMiniProjectsClick = () => {
-    navigate('/projects') // 추후 미니프로젝트 카테고리 필터로 변경 예정
-  }
-
   return (
     <section className={styles.project} id="project-preview" aria-labelledby="project-title">
-      <Motion.div
-        variants={contentVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ amount: 0.3 }}
-        className={`inner ${styles.inner}`}>
-        <Motion.p variants={itemVariants} className={styles.cardHeader}>03 / 나의 프로젝트</Motion.p>
+      <div className={`inner ${styles.inner}`}>
+        <Motion.p
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className={styles.cardHeader}>
+          03 / 나의 프로젝트
+        </Motion.p>
 
         <div className={styles.mainSection}>
           <div className={styles.sectionHead}>
-            <Motion.h2 variants={itemVariants} className={styles.title} id="project-title">주요 프로젝트</Motion.h2>
+            <Motion.h2
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.3 }}
+              className={styles.title}
+              id="project-title">
+              주요 프로젝트
+            </Motion.h2>
             <Motion.button
               variants={itemVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.3 }}
               type="button"
-              onClick={handleProjectsClick}
+              onClick={() => navigate('/projects')}
               aria-label="프로젝트 페이지 이동"
               className={styles.viewAll}
             >
@@ -63,30 +68,45 @@ const Project = () => {
             </Motion.button>
           </div>
 
-          <div className={styles.mainGrid}>
+          <Motion.div
+            variants={contentVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+            className={styles.mainGrid}>
             {mainProjects.map((p) => (
-              <Motion.div variants={itemVariants}>
-                <ProjectCard key={p.id} {...p} />
+              <Motion.div variants={itemVariants} key={p.id}>
+                <ProjectCard {...p} />
               </Motion.div>
             ))}
-          </div>
+          </Motion.div>
         </div>
 
         <div className={styles.miniSection}>
-          <div className={styles.sectionHead}>
-            <Motion.div variants={itemVariants} className={styles.miniTitle}>
+          <Motion.div
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className={styles.sectionHead}>
+            <div className={styles.miniTitle}>
               <h3 className={styles.tit}>
                 <span className={styles.dot}>• </span>
                 미니 프로젝트
               </h3>
               <span className={styles.badge}>{totalMiniCount}개</span>
-            </Motion.div>
-          </div>
+            </div>
+          </Motion.div>
 
-          <div className={styles.miniGrid}>
+          <Motion.div
+            variants={contentVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+            className={styles.miniGrid}>
             {miniProjects.map((p) => (
-              <Motion.div variants={itemVariants}>
-                <MiniProjectCard key={p.id} {...p} />
+              <Motion.div variants={itemVariants} key={p.id}>
+                <MiniProjectCard {...p} />
               </Motion.div>
             ))}
             {extraCount > 0 && (
@@ -94,16 +114,16 @@ const Project = () => {
                 <span>+{extraCount}</span>
                 <button
                   type="button"
-                  onClick={handleMiniProjectsClick}
+                  onClick={() => navigate('/projects')}
                   aria-label="미니 프로젝트 페이지 이동"
                   className={styles.moreLabel}>
                     더 보기
                 </button>
               </Motion.div>
             )}
-          </div>
+          </Motion.div>
         </div>
-      </Motion.div>
+      </div>
     </section>
   )
 }

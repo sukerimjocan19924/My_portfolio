@@ -1,23 +1,37 @@
 import React from 'react'
 import styles from './About.module.scss'
 import { MiniMascotIcon } from '../../utils/mascotIcon'
-import { motion as Motion, scale } from 'framer-motion'
-import { contentVariants, itemVariants } from '../../utils/variants'
+import { motion as Motion } from 'framer-motion'
+import { 
+  contentVariants, 
+  itemVariants, 
+  visualVariantsMobile, 
+  ctaVariantsMobile 
+} from '../../utils/variants'
 
 const About = () => {
+  const isMobile = window.innerWidth <= 599
 
   return (
     <section className={styles.about} aria-labelledby="about-title">
-      <Motion.div
-        variants={contentVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ amount: 0.3 }}
-        className={`inner ${styles.inner}`}>
-        <Motion.p variants={itemVariants} className={styles.cardHeader}>01 / 자기소개서</Motion.p>
-        
+      <div className={`inner ${styles.inner}`}>
+        <Motion.p
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className={styles.cardHeader}>
+          01 / 자기소개서
+        </Motion.p>
+
         <div className={styles.content}>
-          <div className={styles.left}>
+          <Motion.div
+            variants={isMobile ? visualVariantsMobile : contentVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+            className={styles.left}>
+            
             <Motion.div variants={itemVariants} className={styles.card} aria-label="자기소개 카드">
               <div className={styles.quote} aria-label="quote">
                 "창의성과 논리가 만나는 곳"
@@ -47,9 +61,16 @@ const About = () => {
             <Motion.div variants={itemVariants} className={styles.mascotIcon}>
               <MiniMascotIcon />
             </Motion.div>
-          </div>
+          </Motion.div>
 
-          <div className={styles.right} aria-labelledby="about-title">
+          <Motion.div
+            variants={isMobile ? ctaVariantsMobile : contentVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+            className={styles.right}
+            aria-labelledby="about-title">
+            
             <Motion.p variants={itemVariants} className={styles.lead}>
               저는 사용자의 경험을 최우선으로 생각하며,
               아름다운 인터페이스와 견고한 기술적 구조를 함께 추구합니다.
@@ -75,9 +96,9 @@ const About = () => {
                 <li>완성도</li>
               </ul>
             </Motion.div>
-          </div>
+          </Motion.div>
         </div>
-      </Motion.div>
+      </div>
     </section>
   )
 }

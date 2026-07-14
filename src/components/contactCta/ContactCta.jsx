@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import styles from './ContactCta.module.scss'
 import { MiniMascotIcon2_1, MiniMascotIcon2_2 } from '../../utils/mascotIcon'
-import { TriangleIcon, SendIcon, ArrowIcon } from '../../utils/contactIcon'
+import { TriangleIcon, ArrowIcon } from '../../utils/contactIcon'
 import { contactList } from '../../utils/contactList'
 import ContactCard from '../contactCard/ContactCard'
-import { motion as Motion, scale } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { contentVariants, itemVariants } from '../../utils/variants'
 
 const ContactCta = () => {
@@ -12,46 +12,62 @@ const ContactCta = () => {
 
     return (
     <section className={styles.contact} aria-labelledby="contact-heading">
-        <Motion.div
-                variants={contentVariants}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ amount: 0.3 }}
-                className={`inner ${styles.inner}`}>
+        <div className={`inner ${styles.inner}`}>
             <div className={styles.cardHeader}>
-                <Motion.p variants={itemVariants} className={styles.cardTitle}>04 / 마무리 &amp; 연락하기</Motion.p>
+                <Motion.p
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className={styles.cardTitle}>
+                    04 / 마무리 &amp; 연락하기
+                </Motion.p>
 
-                <Motion.div variants={itemVariants} className={styles.mascotWrapper}>
+                <div className={styles.mascotWrapper}>
                     <MiniMascotIcon2_1 />
                     <MiniMascotIcon2_2 />
-                </Motion.div>
+                </div>
             </div>
 
             <div className={styles.mainSection}>
-                <div className={styles.headingbox}>
+                <Motion.div
+                    variants={contentVariants}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.15 }}
+                    className={styles.headingbox}>
                     <Motion.h2 variants={itemVariants} id="contact-heading" className={styles.heading}>
-                    함께라면 <TriangleIcon className={styles.triangle} /> 만들 수 있습니다.
+                        함께라면 <TriangleIcon className={styles.triangle} /> 만들 수 있습니다.
                     </Motion.h2>
 
                     <Motion.p variants={itemVariants} className={styles.subtitle}>
-                    한 줄 코드도, 하나의 디자인도 함께 완성됩니다. 언제든 편하게 연락주세요.
+                        한 줄 코드도, 하나의 디자인도 함께 완성됩니다. 언제든 편하게 연락주세요.
                     </Motion.p>
-                </div>
+                </Motion.div>
 
-                <div
+                <Motion.div
+                    variants={contentVariants}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.15 }}
                     className={styles.contactList}>
-                {contactList.map(({ id, icon: Icon, label, value }) => (
-                    <Motion.div variants={itemVariants} key={id} className={styles.contactItem}>
-                        <span className={styles.iconBox}>
-                            <Icon />
-                        </span>
-                        <strong className={styles.label}>{label}</strong>
-                        <span className={styles.value}>{value}</span>
-                    </Motion.div>
-                ))}
-                </div>
+                    {contactList.map(({ id, icon: Icon, label, value }) => (
+                        <Motion.div variants={itemVariants} key={id} className={styles.contactItem}>
+                            <span className={styles.iconBox}>
+                                <Icon />
+                            </span>
+                            <strong className={styles.label}>{label}</strong>
+                            <span className={styles.value}>{value}</span>
+                        </Motion.div>
+                    ))}
+                </Motion.div>
 
-                <Motion.div variants={itemVariants} className={styles.ctaButtons}>
+                <Motion.div
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className={styles.ctaButtons}>
                     <button
                         className={styles.primaryBtn} 
                         onClick={() => setIsModalOpen(true)}
@@ -65,7 +81,7 @@ const ContactCta = () => {
                     </a>
                 </Motion.div>
             </div>
-        </Motion.div>
+        </div>
 
         {isModalOpen && (
             <div className={styles.modalOverlay}>
