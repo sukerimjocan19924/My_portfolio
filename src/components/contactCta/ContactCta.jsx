@@ -4,47 +4,54 @@ import { MiniMascotIcon2_1, MiniMascotIcon2_2 } from '../../utils/mascotIcon'
 import { TriangleIcon, SendIcon, ArrowIcon } from '../../utils/contactIcon'
 import { contactList } from '../../utils/contactList'
 import ContactCard from '../contactCard/ContactCard'
-
+import { motion as Motion, scale } from 'framer-motion'
+import { contentVariants, itemVariants } from '../../utils/variants'
 
 const ContactCta = () => {
     const [isModalOpen, setIsModalOpen] = useState(false)
 
     return (
     <section className={styles.contact} aria-labelledby="contact-heading">
-        <div className={`inner ${styles.inner}`}>
+        <Motion.div
+                variants={contentVariants}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ amount: 0.3 }}
+                className={`inner ${styles.inner}`}>
             <div className={styles.cardHeader}>
-                <p className={styles.cardTitle}>04 / 마무리 &amp; 연락하기</p>
+                <Motion.p variants={itemVariants} className={styles.cardTitle}>04 / 마무리 &amp; 연락하기</Motion.p>
 
-                <div className={styles.mascotWrapper}>
+                <Motion.div variants={itemVariants} className={styles.mascotWrapper}>
                     <MiniMascotIcon2_1 />
                     <MiniMascotIcon2_2 />
-                </div>
+                </Motion.div>
             </div>
 
             <div className={styles.mainSection}>
                 <div className={styles.headingbox}>
-                    <h2 id="contact-heading" className={styles.heading}>
+                    <Motion.h2 variants={itemVariants} id="contact-heading" className={styles.heading}>
                     함께라면 <TriangleIcon className={styles.triangle} /> 만들 수 있습니다.
-                    </h2>
+                    </Motion.h2>
 
-                    <p className={styles.subtitle}>
+                    <Motion.p variants={itemVariants} className={styles.subtitle}>
                     한 줄 코드도, 하나의 디자인도 함께 완성됩니다. 언제든 편하게 연락주세요.
-                    </p>
+                    </Motion.p>
                 </div>
 
-                <div className={styles.contactList}>
+                <div
+                    className={styles.contactList}>
                 {contactList.map(({ id, icon: Icon, label, value }) => (
-                    <div key={id} className={styles.contactItem}>
-                    <span className={styles.iconBox}>
-                        <Icon />
-                    </span>
-                    <strong className={styles.label}>{label}</strong>
-                    <span className={styles.value}>{value}</span>
-                    </div>
+                    <Motion.div variants={itemVariants} key={id} className={styles.contactItem}>
+                        <span className={styles.iconBox}>
+                            <Icon />
+                        </span>
+                        <strong className={styles.label}>{label}</strong>
+                        <span className={styles.value}>{value}</span>
+                    </Motion.div>
                 ))}
                 </div>
 
-                <div className={styles.ctaButtons}>
+                <Motion.div variants={itemVariants} className={styles.ctaButtons}>
                     <button
                         className={styles.primaryBtn} 
                         onClick={() => setIsModalOpen(true)}
@@ -56,9 +63,9 @@ const ContactCta = () => {
                         <ArrowIcon />
                         Contact 상세 페이지로
                     </a>
-                </div>
+                </Motion.div>
             </div>
-        </div>
+        </Motion.div>
 
         {isModalOpen && (
             <div className={styles.modalOverlay}>
