@@ -56,3 +56,15 @@ export const ctaVariantsMobile = {
   },
 }
 
+export const barFillVariants = {
+  hidden: { width: '0%' },
+  show: (percent) => ({
+    width: `${percent}%`,
+    transition: {
+      duration: 0.9,
+      ease: [0.22, 1, 0.36, 1],
+      delay: 0.15,
+    },
+  }),
+}
+

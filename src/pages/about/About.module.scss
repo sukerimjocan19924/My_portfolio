@@ -1,0 +1,868 @@
+@use '../../styles/variables' as *;
+
+.aboutPage {
+  background-color: var(--color-bg-muted);
+}
+
+.section {
+  padding: 0 $space-2;
+  border-bottom: 1.5px solid var(--color-border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .inner {
+    padding: $space-6 0;
+
+    @media (max-width: 899px) and (min-width: 600px) {
+      padding: $space-5 0;
+    }
+
+    @media (max-width: 599px) {
+      padding: $space-4 0;
+    }
+  }
+}
+
+.sectionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-2;
+  margin-bottom: $space-6;
+
+  @media (max-width: 599px) {
+    margin-bottom: $space-4;
+  }
+}
+
+.sectionHeader {
+  display: inline-flex;
+  align-items: center;
+  padding-left: $space-3-1;
+  border-left: 0.6rem solid var(--color-primary);
+  line-height: 2.8rem;
+  color: var(--color-primary);
+  font-size: clamp($font-size-md, 1.8vw, $font-size-lg);
+  font-weight: 600;
+  margin-bottom: $space-6;
+
+  .sectionTop & {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 599px) {
+    margin-bottom: $space-4;
+  }
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-0;
+  font-size: $font-size-sm;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+
+  svg {
+    width: $font-size-md;
+    height: $font-size-md;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 599px) {
+    span {
+      display: none;
+    }
+  }
+}
+
+.sectionTitle {
+  font-size: clamp($font-size-2xl, 3vw, $font-size-3xl);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: $space-2;
+  word-break: keep-all;
+}
+
+.sectionLead {
+  font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
+  color: var(--color-text-muted);
+  margin-bottom: $space-6;
+  word-break: keep-all;
+
+  @media (max-width: 599px) {
+    margin-bottom: $space-4;
+  }
+}
+
+/* ---------- 01 / About Me ---------- */
+
+.meGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp($space-4, 6vw, $space-10);
+  align-items: flex-start;
+
+  @media (max-width: 899px) {
+    grid-template-columns: 1fr;
+    gap: $space-5;
+  }
+}
+
+.meLeft {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.meHeading {
+  font-size: clamp($font-size-3xl, 5vw, $font-size-5xl);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-text);
+  word-break: keep-all;
+}
+
+.meRole {
+  display: inline-flex;
+  align-items: center;
+  padding-left: $space-2;
+  border-left: 0.4rem solid var(--color-primary);
+  font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: $space-1 0;
+}
+
+.meParagraph {
+  font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+  word-break: keep-all;
+
+  @media (max-width: 599px) {
+    font-size: $font-size-sm;
+  }
+}
+
+.meActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-top: $space-3;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-1;
+
+    svg {
+      width: $font-size-md;
+      height: $font-size-md;
+    }
+  }
+
+  @media (max-width: 599px) {
+    flex-direction: column;
+    width: 100%;
+
+    a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.meRight {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+}
+
+.profileCard {
+  background-color: var(--color-bg);
+  border: 0.15rem solid var(--color-border-card);
+  border-radius: $radius-smsm;
+  overflow: hidden;
+  box-shadow: $shadow-2lg;
+  transition: $transition-theme;
+}
+
+.profileAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-5 0;
+  background-color: var(--color-primary-light);
+}
+
+.avatarCircle {
+  width: 9rem;
+  height: 9rem;
+  border-radius: $radius-full;
+  background-color: var(--color-bg);
+  box-shadow: $shadow-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-1_1;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.profileBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: $space-4;
+  gap: 0.4rem;
+}
+
+.profileName {
+  font-size: $font-size-xl;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.profileRole {
+  font-size: $font-size-sm;
+  color: var(--color-text-muted);
+}
+
+.availableBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: $font-size-xs;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: $space-1 0 $space-3;
+}
+
+.availableDot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: $radius-full;
+  background-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr auto;
+    align-items: center;
+    gap: $space-1_1;
+    padding: $space-1_1 0;
+    border-top: 0.15rem solid var(--color-tool-card-border2);
+    text-align: left;
+  }
+}
+
+.profileInfoIcon {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: $radius-sssm;
+  background-color: var(--color-icon-bg);
+  border: 0.15rem solid var(--color-icon-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    width: $font-size-sm;
+    height: $font-size-sm;
+    color: var(--color-primary);
+  }
+}
+
+.profileInfoKey {
+  font-size: $font-size-xs;
+  color: var(--color-text-muted);
+}
+
+.profileInfoVal {
+  font-size: $font-size-sm;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: right;
+  word-break: break-all;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-2;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: $space-3 $space-1;
+  background-color: var(--color-bg);
+  border: 0.15rem solid var(--color-border-card);
+  border-radius: $radius-smsm;
+  box-shadow: $shadow-2lg;
+  transition: $transition-theme;
+}
+
+.statValue {
+  font-size: clamp($font-size-xl, 2.5vw, $font-size-2xl);
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.statLabel {
+  font-size: $font-size-xs;
+  color: var(--color-text-muted);
+}
+
+/* ---------- 02 / Core Values ---------- */
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $space-3;
+
+  @media (max-width: 899px) and (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 599px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.valueCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-2;
+  padding: $space-4;
+  background-color: var(--color-bg);
+  border: 0.15rem solid var(--color-border-card);
+  border-radius: $radius-smsm;
+  transition: $transition-theme, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: $shadow-2lg;
+    transform: translateY(-2px);
+  }
+}
+
+.valueIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: $radius-sssm;
+  background-color: var(--color-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: $font-size-xl;
+    height: $font-size-xl;
+    color: var(--color-primary);
+  }
+}
+
+.valueTitle {
+  font-size: $font-size-lg;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.valueDesc {
+  font-size: $font-size-sm;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  word-break: keep-all;
+  flex: 1;
+}
+
+.valueTag {
+  font-size: $font-size-xs;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: var(--color-icon-bg);
+  border: 0.1rem solid var(--color-border-red);
+  border-radius: $radius-full;
+  padding: 0.3rem $space-2;
+}
+
+/* ---------- 03 / Career Timeline ---------- */
+
+.careerGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp($space-4, 5vw, $space-8);
+  align-items: flex-start;
+
+  @media (max-width: 899px) {
+    grid-template-columns: 1fr;
+    gap: $space-5;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+  position: relative;
+  padding-left: $space-4;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0.3rem;
+    top: 0.6rem;
+    bottom: 0.6rem;
+    width: 0.15rem;
+    background-color: var(--color-border);
+  }
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -$space-4;
+  top: 0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: $radius-full;
+  background-color: var(--color-primary);
+  border: 0.2rem solid var(--color-bg-muted);
+  box-shadow: 0 0 0 0.15rem var(--color-primary);
+
+  &.dot_goal {
+    background-color: var(--color-text-disabled);
+    box-shadow: 0 0 0 0.15rem var(--color-text-disabled);
+  }
+}
+
+.timelineHead {
+  display: flex;
+  align-items: center;
+  gap: $space-1_1;
+  flex-wrap: wrap;
+}
+
+.timelinePeriod {
+  font-size: $font-size-xs;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: var(--color-card-bg);
+  border-radius: $radius-full;
+  padding: 0.3rem $space-2;
+}
+
+.timelineStatus {
+  font-size: $font-size-xs;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border: 0.1rem solid var(--color-border);
+  border-radius: $radius-full;
+  padding: 0.25rem $space-2;
+
+  &.status_active,
+  &.status_done {
+    color: var(--color-primary);
+    border-color: var(--color-border-red);
+  }
+}
+
+.timelineTitle {
+  font-size: clamp($font-size-lg, 1.8vw, $font-size-xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.timelineDesc {
+  font-size: $font-size-sm;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  word-break: keep-all;
+}
+
+.timelineTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-0;
+  margin-top: 0.2rem;
+}
+
+.timelineTag {
+  font-size: $font-size-xs;
+  color: var(--btn-hero-text);
+  border: 0.1rem solid var(--color-tag-border);
+  border-radius: $radius-sssm;
+  padding: 0.2rem $space-1_1;
+}
+
+.careerSide {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.sideCard {
+  background-color: var(--color-bg);
+  border: 0.15rem solid var(--color-border-card);
+  border-radius: $radius-smsm;
+  padding: $space-4;
+  box-shadow: $shadow-2lg;
+  transition: $transition-theme;
+}
+
+.sideCardTitle {
+  display: flex;
+  align-items: center;
+  gap: $space-1_1;
+  font-size: $font-size-md;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: $space-3;
+}
+
+.sideCardIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: $radius-sssm;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    width: $font-size-md;
+    height: $font-size-md;
+    color: #fff;
+  }
+}
+
+.awardList {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-1_1;
+    padding: $space-1_1 0;
+    border-bottom: 0.15rem solid var(--color-border);
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    strong {
+      font-size: $font-size-sm;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    span {
+      font-size: $font-size-xs;
+      color: var(--color-text-muted);
+    }
+  }
+}
+
+.awardDot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: $radius-full;
+  background-color: var(--color-primary);
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.workList {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-1_1;
+  }
+
+  span {
+    font-size: $font-size-sm;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    word-break: keep-all;
+  }
+}
+
+.workCheck {
+  width: $font-size-md;
+  height: $font-size-md;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* ---------- 04 / Education ---------- */
+
+.eduGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-3;
+
+  @media (max-width: 899px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.eduCard {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  padding: $space-4;
+  background-color: var(--color-bg);
+  border: 0.15rem solid var(--color-border-card);
+  border-radius: $radius-smsm;
+  box-shadow: $shadow-2lg;
+  transition: $transition-theme;
+}
+
+.eduHead {
+  display: flex;
+  align-items: center;
+  gap: $space-1_1;
+}
+
+.eduIcon {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: $radius-sssm;
+  background-color: var(--color-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    width: $font-size-lg;
+    height: $font-size-lg;
+    color: var(--color-primary);
+  }
+}
+
+.eduTitle {
+  flex: 1;
+  font-size: $font-size-lg;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.eduBadge {
+  font-size: $font-size-xs;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: var(--color-icon-bg);
+  border: 0.1rem solid var(--color-border-red);
+  border-radius: $radius-full;
+  padding: 0.3rem $space-2;
+  white-space: nowrap;
+}
+
+.eduSub {
+  font-size: $font-size-sm;
+  color: var(--color-text-muted);
+  margin-top: -$space-2;
+}
+
+.eduRows {
+  display: flex;
+  flex-direction: column;
+  padding: $space-1 0;
+  border-top: 0.15rem solid var(--color-border);
+  border-bottom: 0.15rem solid var(--color-border);
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-2;
+    padding: $space-1 0;
+    font-size: $font-size-sm;
+  }
+}
+
+.eduKey {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.eduVal {
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: right;
+}
+
+.eduTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-0;
+}
+
+.eduTag {
+  font-size: $font-size-xs;
+  color: var(--btn-hero-text);
+  border: 0.1rem solid var(--color-tag-border);
+  border-radius: $radius-sssm;
+  padding: 0.2rem $space-1_1;
+}
+
+/* ---------- 05 / Who I Am ---------- */
+
+.whoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp($space-4, 6vw, $space-8);
+  align-items: center;
+
+  @media (max-width: 899px) {
+    grid-template-columns: 1fr;
+    gap: $space-4;
+  }
+}
+
+.whoLeft {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.whoHeading {
+  font-size: clamp($font-size-2xl, 4vw, $font-size-4xl);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-text);
+  word-break: keep-all;
+}
+
+.whoDesc {
+  font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  word-break: keep-all;
+}
+
+.whoTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-top: $space-1;
+}
+
+.whoTag,
+.whoTagPrimary {
+  font-size: $font-size-sm;
+  font-weight: 500;
+  padding: $space-1 $space-3;
+  border-radius: $radius-sssm;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.whoTag {
+  background-color: transparent;
+  color: var(--btn-hero-text);
+  border: 0.1rem solid var(--btn-hero-border);
+
+  &:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}
+
+.whoTagPrimary {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+}
+
+.whoRight {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.whoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-2;
+  padding: $space-3;
+  background-color: var(--color-bg);
+  border: 0.15rem solid var(--color-border-card);
+  border-radius: $radius-smsm;
+  transition: $transition-theme;
+
+  strong {
+    font-size: $font-size-md;
+    font-weight: 700;
+    color: var(--color-text);
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  p {
+    font-size: $font-size-sm;
+    color: var(--color-text-muted);
+    word-break: keep-all;
+  }
+}
+
+.whoRowIcon {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: $radius-sssm;
+  background-color: var(--color-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    width: $font-size-lg;
+    height: $font-size-lg;
+    color: var(--color-primary);
+  }
+}
