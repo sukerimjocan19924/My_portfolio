@@ -1,5 +1,5 @@
 export const MascotIcon = () => (
-  <svg width="330" height="330" viewBox="0 0 330 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="100%" height="100%"  viewBox="0 0 330 330" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_383_27)">
       <path style={{opacity: 'var(--mascot-opacity-horn1)'}} d="M93 52.5059C95.4853 52.5059 97.5 50.4911 97.5 48.0059C97.5 45.5206 95.4853 43.5059 93 43.5059C90.5147 43.5059 88.5 45.5206 88.5 48.0059C88.5 50.4911 90.5147 52.5059 93 52.5059Z" fill="var(--mascot-horn)"/>
       <path style={{opacity: 'var(--mascot-opacity-horn2)'}} d="M252 77.9961C253.657 77.9961 255 76.6529 255 74.9961C255 73.3392 253.657 71.9961 252 71.9961C250.343 71.9961 249 73.3392 249 74.9961C249 76.6529 250.343 77.9961 252 77.9961Z" fill="var(--mascot-horn)"/>

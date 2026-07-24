@@ -2,10 +2,12 @@
 
 .btn {
     border-radius: $radius-sssmm;
-    padding: 1.8rem 4.2rem;
-    font-size: 2.25rem;
+    padding: clamp(1rem, 2vw, 1.8rem) clamp(2rem, 4vw, 4.2rem);
+    font-size: clamp($font-size-sm, 2vw, 2.25rem);
     cursor: pointer;
     font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
 
     &__outline {
         border: 1px solid var(--btn-outline-border);
@@ -31,12 +33,14 @@
     }
 
     &__small {
-        font-size: 1.2rem;
+        font-size: clamp($font-size-xs, 1.5vw, 1.2rem);
+        padding: clamp(.4rem, 1vw, .6rem) clamp(.8rem, 2vw, 1.2rem);
     }
 
     &__md {
-        font-size: $font-size-md;
+        font-size: clamp($font-size-sm, 1.8vw, $font-size-md);
         border-radius: $radius-sssm;
+        padding: clamp(.8rem, 1.5vw, 1rem) clamp(1.6rem, 3vw, 2.4rem);
     }
 
     &__ghost {
@@ -47,11 +51,13 @@
 }
 
 .badge {
-    padding: .3rem .7rem;
-    font-size: 1.2rem;
+    padding: clamp(.2rem, .5vw, .3rem) clamp(.5rem, 1vw, .7rem);
+    font-size: clamp($font-size-xs, 1.5vw, 1.2rem);
     display: inline-flex;
     align-self: flex-start;
     border-radius: $radius-full;
+    line-height: 1;
+    white-space: nowrap;
 
     &__green {
         background-color: rgba(16, 185, 128, .15);

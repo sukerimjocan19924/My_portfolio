@@ -3,9 +3,18 @@
 .about {
   background-color: var(--color-bg-muted);
   border-bottom: 1.5px solid var(--color-border);
+  padding: 0 $space-2;
 
   .inner {
     padding: $space-6 0;
+
+    @media (max-width: 899px) and (min-width: 600px) {
+      padding: $space-5 0;
+    }
+
+    @media (max-width: 599px) {
+      padding: $space-4 0;
+    }
 
     .cardHeader {
       display: inline-flex;
@@ -17,6 +26,10 @@
       color: var(--color-primary);
       font-size: clamp($font-size-md, 1.8vw, $font-size-lg);
       font-weight: 600;
+
+      @media (max-width: 599px) {
+        margin-bottom: $space-4;
+      }
     }
 
     .content {
@@ -25,10 +38,30 @@
       gap: clamp($space-4, 6vw, $space-10);
       align-items: flex-start;
 
+      @media (max-width: 899px) and (min-width: 600px) {
+        grid-template-columns: 32rem 1fr;
+        gap: $space-5;
+      }
+
+      @media (max-width: 599px) {
+        grid-template-columns: 1fr;
+        gap: $space-4;
+      }
+
       .left {
         display: flex;
         flex-direction: column;
         gap: $space-5;
+
+        @media (max-width: 599px) {
+          gap: $space-3;
+
+          .mascotIcon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
 
         .card {
           background-color: var(--color-bg);
@@ -42,11 +75,20 @@
           box-shadow: $shadow-2lg;
           transition: $transition-theme;
 
+          @media (max-width: 599px) {
+            padding: $space-3;
+            gap: $space-2;
+          }
+
           .quote {
             font-size: clamp($font-size-xl, 2.5vw, $font-size-3xl);
             font-weight: 700;
             color: var(--color-text);
             word-break: keep-all;
+
+            @media (max-width: 599px) {
+              font-size: clamp($font-size-lg, 5vw, $font-size-xl);
+            }
           }
 
           .identity {
@@ -57,12 +99,24 @@
             font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
             font-weight: 400;
             color: var(--color-text-tertiary);
+
+            @media (max-width: 599px) {
+              font-size: $font-size-sm;
+              padding-top: $space-2;
+            }
           }
         }
 
         .info {
           display: flex;
           flex-direction: column;
+
+          @media (max-width: 599px) {
+            display: grid;
+            grid-template-columns: repeat(1, .32fr 2fr 1fr);
+            gap: $space-2;
+            margin: auto $space-3;
+          }
 
           .infoRow {
             display: flex;
@@ -80,16 +134,42 @@
               padding-bottom: 0;
             }
 
+            @media (max-width: 599px) {
+              padding: 0;
+              border-bottom: none;
+              border-left: 0.15rem solid var(--color-tool-card-border2);
+              padding-left: $space-2;
+
+              &:first-child {
+                border-left: none;
+                padding-left: 0;
+              }
+            }
+
             .infoKey {
               font-size: clamp($font-size-sm, 1.4vw, $font-size-md);
               font-weight: 400;
               color: $color-primary;
+
+              @media (max-width: 599px) {
+                font-size: $font-size-xs;
+              }
             }
 
             .infoVal {
               font-size: clamp($font-size-lg, 2vw, $font-size-2xl);
               color: var(--color-text);
               font-weight: 600;
+
+              @media (max-width: 899px) and (min-width: 600px) {
+                font-size: clamp($font-size-md, 2vw, $font-size-lg);
+              }
+
+              @media (max-width: 599px) {
+                font-size: $font-size-sm;
+                font-weight: 600;
+                word-break: break-all;
+              }
             }
           }
         }
@@ -100,6 +180,10 @@
         flex-direction: column;
         gap: $space-4;
 
+        @media (max-width: 599px) {
+          gap: $space-3;
+        }
+
         .lead {
           font-size: clamp($font-size-lg, 2vw, $font-size-2_1xl);
           font-weight: 300;
@@ -109,6 +193,11 @@
           padding-bottom: $space-3;
           margin: 0.1rem;
           border-bottom: 0.15rem solid var(--theme-color-border);
+
+          @media (max-width: 599px) {
+            font-size: $font-size-md;
+            padding-bottom: $space-2;
+          }
         }
 
         .paragraph {
@@ -116,6 +205,10 @@
           line-height: 1.5;
           color: var(--color-text-tertiary);
           word-break: keep-all;
+
+          @media (max-width: 599px) {
+            font-size: $font-size-sm;
+          }
         }
 
         .keywords {
@@ -126,12 +219,20 @@
           strong {
             font-size: clamp($font-size-sm, 1.4vw, $font-size-md);
             color: var(--color-text-muted);
+
+            @media (max-width: 599px) {
+              font-size: $font-size-xs;
+            }
           }
 
           ul {
             display: flex;
             flex-wrap: wrap;
             gap: $space-2;
+
+            @media (max-width: 599px) {
+              gap: $space-1;
+            }
 
             li {
               font-size: clamp($font-size-md, 1.6vw, $font-size-lg);
@@ -142,6 +243,11 @@
               background-color: transparent;
               color: var(--btn-hero-text);
               border: 0.1rem solid var(--btn-hero-border);
+
+              @media (max-width: 599px) {
+                font-size: $font-size-xs;
+                padding: $space-0 $space-2;
+              }
 
               &:hover {
                 border-color: var(--color-primary);

@@ -2,7 +2,7 @@
 export const EmailIcon = ({ className }) => (
   <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M27.5 8.75L16.2612 15.9088C15.8799 16.1303 15.4467 16.2469 15.0056 16.2469C14.5646 16.2469 14.1314 16.1303 13.75 15.9088L2.5 8.75" stroke="currentColor" strokeWidth={1.875} strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M25 5H5C3.61929 5 2.5 6.11929 2.5 7.5V22.5C2.5 23.8807 3.61929 25 5 25H25C26.3807 25 27.5 23.8807 27.5 22.5V7.5C27.5 6.11929 26.3807 5 25 5Z" stroke="currentColor" stroke-Width={1.875} strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M25 5H5C3.61929 5 2.5 6.11929 2.5 7.5V22.5C2.5 23.8807 3.61929 25 5 25H25C26.3807 25 27.5 23.8807 27.5 22.5V7.5C27.5 6.11929 26.3807 5 25 5Z" stroke="currentColor" strokeWidth={1.875} strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 )
 
@@ -20,7 +20,7 @@ export const PhoneIcon = ({ className }) => (
 
 export const GithubIcon = ({ className }) => (
   <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M18.7507 27.5V22.5C18.9246 20.9341 18.4756 19.3627 17.5007 18.125C21.2507 18.125 25.0007 15.625 25.0007 11.25C25.1007 9.6875 24.6632 8.15 23.7507 6.875C24.1007 5.4375 24.1007 3.9375 23.7507 2.5C23.7507 2.5 22.5007 2.5 20.0007 4.375C16.7007 3.75 13.3007 3.75 10.0007 4.375C7.50072 2.5 6.25072 2.5 6.25072 2.5C5.87572 3.9375 5.87572 5.4375 6.25072 6.875C5.34056 8.14485 4.89881 9.69098 5.00072 11.25C5.00072 15.625 8.75072 18.125 12.5007 18.125C12.0132 18.7375 11.6507 19.4375 11.4382 20.1875C11.2257 20.9375 11.1632 21.725 11.2507 22.5V27.5" stroke="currentColor" strokeWidth="1.875" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M18.7507 27.5V22.5C18.9246 20.9341 18.4756 19.3627 17.5007 18.125C21.2507 18.125 25.0007 15.625 25.0007 11.25C25.1007 9.6875 24.6632 8.15 23.7507 6.875C24.1007 5.4375 24.1007 3.9375 23.7507 2.5C23.7507 2.5 22.5007 2.5 20.0007 4.375C16.7007 3.75 13.3007 3.75 10.0007 4.375C7.50072 2.5 6.25072 2.5 6.25072 2.5C5.87572 3.9375 5.87572 5.4375 6.25072 6.875C5.34056 8.14485 4.89881 9.69098 5.00072 11.25C5.00072 15.625 8.75072 18.125 12.5007 18.125C12.0132 18.7375 11.6507 19.4375 11.4382 20.1875C11.2257 20.9375 11.1632 21.725 11.2507 22.5V27.5" stroke="currentColor" strokeWidth={1.875} strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M11.25 22.5C5.6125 25 5 20 2.5 20" stroke="currentColor" strokeWidth={1.875} strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 )
@@ -34,15 +34,15 @@ export const TriangleIcon = ({ className }) => (
 
 export const ArrowIcon = ({ className }) => (
   <svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <path d="M4.375 10.5H16.625" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M10.5 4.37695L16.625 10.502L10.5 16.627" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M4.375 10.5H16.625" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M10.5 4.37695L16.625 10.502L10.5 16.627" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )
 
 export const SendIcon = ({ className }) => (
   <svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <path d="M4.375 10.5H16.625" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M10.5 4.37695L16.625 10.502L10.5 16.627" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M4.375 10.5H16.625" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M10.5 4.37695L16.625 10.502L10.5 16.627" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )
 
@@ -83,5 +83,22 @@ export const ShieldCheckIcon = ({ className }) => (
   <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M11.6654 7.58294C11.6654 10.4996 9.6237 11.9579 7.19703 12.8038C7.06996 12.8468 6.93193 12.8448 6.8062 12.7979C4.3737 11.9579 2.33203 10.4996 2.33203 7.58294V3.49961C2.33203 3.3449 2.39349 3.19653 2.50289 3.08713C2.61228 2.97774 2.76065 2.91628 2.91536 2.91628C4.08203 2.91628 5.54036 2.21628 6.55536 1.32961C6.67895 1.22403 6.83615 1.16602 6.9987 1.16602C7.16124 1.16602 7.31845 1.22403 7.44203 1.32961C8.46286 2.22211 9.91536 2.91628 11.082 2.91628C11.2367 2.91628 11.3851 2.97774 11.4945 3.08713C11.6039 3.19653 11.6654 3.3449 11.6654 3.49961V7.58294Z" stroke="currentColor" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M5.25 7.00065L6.41667 8.16732L8.75 5.83398" stroke="currentColor" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+// contactPageIconAdd
+export const InfoCardIcon = ({ className }) => (
+  <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.7737 25.6673C18.2218 25.1664 18.5162 24.547 18.6218 23.8833C18.7273 23.2195 18.6395 22.5393 18.3688 21.9241C18.0981 21.3089 17.656 20.7847 17.0953 20.4141C16.5346 20.0434 15.8791 19.842 15.207 19.834" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M18.668 23.3327C18.668 22.4044 19.0367 21.5142 19.6931 20.8578C20.3495 20.2014 21.2397 19.8327 22.168 19.8327H23.3346C23.9535 19.8327 24.547 19.5868 24.9846 19.1493C25.4221 18.7117 25.668 18.1182 25.668 17.4993V15.166C25.668 13.9283 25.1763 12.7414 24.3011 11.8662C23.426 10.991 22.239 10.4993 21.0013 10.4993V4.66602" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M21 15.166H21.0117" stroke="currentColor" strokeWidth={1.75} stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20.9987 7.00065C19.761 7.00065 18.574 7.49232 17.6989 8.36749C16.8237 9.24266 16.332 10.4296 16.332 11.6673C14.1661 11.6673 12.0889 12.5277 10.5573 14.0593C9.02578 15.5908 8.16536 17.6681 8.16536 19.834C8.16536 14.0007 12.832 14.0007 12.832 7.58398C12.832 6.89454 12.6962 6.21186 12.4324 5.5749C12.1686 4.93794 11.7818 4.35918 11.2943 3.87167C10.8068 3.38417 10.2281 2.99745 9.59112 2.73362C8.95416 2.46978 8.27147 2.33398 7.58203 2.33398C6.89259 2.33398 6.2099 2.46978 5.57294 2.73362C4.93598 2.99745 4.35723 3.38417 3.86972 3.87167C3.38221 4.35918 2.9955 4.93794 2.73166 5.5749C2.46783 6.21186 2.33203 6.89454 2.33203 7.58398C2.33203 8.35753 2.63932 9.0994 3.1863 9.64638C3.73328 10.1934 4.47515 10.5007 5.2487 10.5007C6.02225 10.5007 6.76411 10.1934 7.31109 9.64638C7.85807 9.0994 8.16536 8.35753 8.16536 7.58398C8.16536 11.6673 3.4987 12.834 3.4987 19.834C3.4987 23.1007 6.06536 25.6673 9.33203 25.6673H20.9987" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const LocationIcon = ({ className }) => (
+  <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.3346 9.16732C18.3346 13.7442 13.2572 18.5109 11.5522 19.9831C11.3934 20.1025 11.2 20.1671 11.0013 20.1671C10.8026 20.1671 10.6092 20.1025 10.4504 19.9831C8.74539 18.5109 3.66797 13.7442 3.66797 9.16732C3.66797 7.2224 4.44059 5.35713 5.81585 3.98187C7.19112 2.6066 9.05638 1.83398 11.0013 1.83398C12.9462 1.83398 14.8115 2.6066 16.1868 3.98187C17.562 5.35713 18.3346 7.2224 18.3346 9.16732Z" stroke="currentColor" strokeWidth={1.375} strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M11 11.916C12.5188 11.916 13.75 10.6848 13.75 9.16602C13.75 7.64723 12.5188 6.41602 11 6.41602C9.48122 6.41602 8.25 7.64723 8.25 9.16602C8.25 10.6848 9.48122 11.916 11 11.916Z" stroke="currentColor" strokeWidth={1.375} strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 )
