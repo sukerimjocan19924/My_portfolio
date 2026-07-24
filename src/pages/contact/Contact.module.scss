@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .contactPage {
   min-height: 100vh;
@@ -6,363 +6,479 @@
 
   .inner {
     padding: $space-6 $space-2;
+  }
 
-    .hero {
-      padding: $space-6 0 $space-8;
-      transition: $transition-theme;
+  .hero {
+    padding: $space-6 0 $space-8;
 
-      // @media (max-width: 899px) and (min-width: 600px) {
-      //   padding: $space-5 0 $space-6;
-      // }
+    .heroInner {
+      width: 100%;
+    }
 
-      // @media (max-width: 599px) {
-      //   padding: $space-4 0 $space-5;
-      // }
+    .heroContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: $space-8;
+    }
 
-      .heroInner {
-        display: flex;
-        flex-direction: column;
-        gap: $space-4;
+    .heroLeft {
+      flex: 1;
+      min-width: 0;
+    }
 
-        // @media (max-width: 599px) {
-        //   gap: $space-3;
-        // }
+    .heroRight {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
 
-        .heroHeader {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+    .heading {
+      margin: 0;
+      font-size: clamp($font-size-3xl, 5vw, $font-size-5xl);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--color-text);
+      font-family: $font-sans;
+      word-break: keep-all;
 
-          .cardHeader {
-            display: inline-flex;
-            align-items: center;
-            padding-left: $space-3-1;
-            border-left: 0.6rem solid var(--color-primary);
-            line-height: 2.8rem;
-            color: var(--color-primary);
-            font-size: clamp($font-size-md, 1.8vw, $font-size-lg);
-            font-weight: 600;
-            font-family: $font-sans;
-          }
-
-          .mascotWrapper {
-            display: flex;
-            align-items: center;
-            gap: $space-0;
-          }
-        }
-
-        .heading {
-          font-size: clamp($font-size-3xl, 5vw, $font-size-5xl);
-          font-weight: 800;
-          color: var(--color-text);
-          line-height: 1.2;
-          margin: 0;
-          font-family: $font-sans;
-          word-break: keep-all;
-
-          // @media (max-width: 899px) and (min-width: 600px) {
-          //   font-size: clamp($font-size-2xl, 4vw, $font-size-3xl);
-          // }
-
-          // @media (max-width: 599px) {
-          //   font-size: clamp($font-size-xl, 7vw, $font-size-2xl);
-          // }
-
-          .highlight {
-            color: var(--color-primary);
-          }
-        }
-
-        .subtitle {
-          font-size: clamp($font-size-md, 1.8vw, $font-size-lg);
-          color: var(--color-text-muted);
-          margin: 0;
-          font-family: $font-sans;
-
-          // @media (max-width: 599px) {
-          //   font-size: $font-size-sm;
-          // }
-        }
+      .highlight {
+        color: var(--color-primary);
       }
     }
 
-    .bodyInner {
-      width: 100%;
-      padding: $space-6 0 $space-10;
+    .subtitle {
+      margin-top: $space-3;
+      max-width: 42rem;
+      font-size: clamp($font-size-md, 1.8vw, $font-size-lg);
+      line-height: 1.8;
+      color: var(--color-text-muted);
+      font-family: $font-sans;
+    }
 
-      // @media (max-width: 899px) and (min-width: 600px) {
-      //   padding: $space-5 0 $space-8;
-      // }
-
-      // @media (max-width: 599px) {
-      //   padding: $space-4 0 $space-6;
-      // }
-
-      .body {
-        display: flex;
-        gap: $space-6;
-        justify-content: center;
-        align-items: flex-start;
-        flex-wrap: nowrap;
-
-        // @media (max-width: 899px) {
-        //   flex-wrap: wrap;
-        //   gap: $space-4;
-        // }
-
-        .formWrap,
-        .infoWrap {
-          width: 100%;
-        }
-
-        .infoWrap {
-          display: flex;
-          flex-direction: column;
-          gap: $space-4;
-
-          .infoCard {
-            background: var(--color-bg);
-            border: 0.15rem solid var(--color-border-card);
-            border-radius: $radius-smsm;
-            padding: $space-4;
-            box-shadow: $shadow-2lg;
-            transition: $transition-theme;
-
-            .infoCardHeader {
-              display: flex;
-              align-items: center;
-              gap: $space-2;
-              padding-bottom: $space-3;
-              margin-bottom: $space-3;
-              border-bottom: 0.15rem solid var(--color-border-card);
-
-              .infoCardIcon {
-                width: 4rem;
-                height: 4rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: var(--color-primary);
-                border-radius: $radius-sssm;
-                flex-shrink: 0;
-
-                svg {
-                  width: $font-size-xl;
-                  height: $font-size-xl;
-                  color: #ffffff;
-                }
-              }
-
-              .infoCardTitle {
-                font-size: $font-size-lg;
-                font-weight: 700;
-                color: var(--color-text);
-                display: block;
-                font-family: $font-sans;
-              }
-
-              .infoCardSub {
-                font-size: $font-size-xs;
-                color: var(--color-text-muted);
-                margin: 0;
-                font-family: $font-sans;
-              }
-            }
-
-            .infoList {
-              display: flex;
-              flex-direction: column;
-
-              .infoItem {
-                display: flex;
-                align-items: center;
-                gap: $space-2;
-                padding: $space-2 0;
-                border-bottom: 0.15rem solid var(--color-border);
-
-                &:last-child {
-                  border-bottom: none;
-                  padding-bottom: 0;
-                }
-
-                .infoIcon {
-                  width: 3.2rem;
-                  height: 3.2rem;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  background-color: var(--color-icon-bg);
-                  border: 0.15rem solid var(--color-icon-border);
-                  border-radius: $radius-sssm;
-                  flex-shrink: 0;
-
-                  svg {
-                    width: $font-size-md;
-                    height: $font-size-md;
-                    color: var(--color-primary);
-                  }
-                }
-
-                .infoMeta {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 0.2rem;
-
-                  .infoValue {
-                    font-size: $font-size-md;
-                    font-weight: 500;
-                    color: var(--color-text);
-                    text-decoration: none;
-                    font-family: $font-sans;
-                    transition: color 0.2s ease;
-
-                    &:hover {
-                      color: var(--color-primary);
-                    }
-                  }
-
-                  .infoLabel {
-                    font-size: $font-size-xs;
-                    color: var(--color-text-muted);
-                    font-family: $font-sans;
-                  }
-                }
-              }
-            }
-          }
-
-          .quickCard {
-            background: var(--color-bg);
-            border: 0.15rem solid var(--color-border-card);
-            border-radius: $radius-smsm;
-            padding: $space-4;
-            box-shadow: $shadow-2lg;
-            transition: $transition-theme;
-
-            .quickLinks {
-              display: flex;
-              gap: $space-2;
-              flex-wrap: wrap;
-
-              .quickLink {
-                display: inline-flex;
-                align-items: center;
-                gap: $space-1;
-                font-size: $font-size-sm;
-                font-weight: 500;
-                color: var(--color-text-muted);
-                text-decoration: none;
-                border: 0.15rem solid var(--color-border);
-                border-radius: $radius-sssm;
-                padding: $space-1_1 $space-3;
-                font-family: $font-sans;
-                transition: $transition-theme;
-
-                svg {
-                  width: $font-size-sm;
-                  height: $font-size-sm;
-                }
-
-                &:hover {
-                  color: var(--color-primary);
-                  border-color: var(--color-primary);
-                }
-              }
-            }
-          }
-
-          .statusCard {
-            background: var(--color-bg);
-            border: 0.15rem solid var(--color-border-card);
-            border-radius: $radius-smsm;
-            padding: $space-4;
-            box-shadow: $shadow-2lg;
-            transition: $transition-theme;
-
-            .statusHeader {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-bottom: $space-3;
-
-              .quickTitle {
-                margin: 0;
-              }
-
-              .statusBadge {
-                font-size: $font-size-xs;
-                font-weight: 600;
-                color: var(--color-primary);
-                background-color: var(--color-icon-bg);
-                border: 0.1rem solid var(--color-border-red);
-                border-radius: $radius-full;
-                padding: 0.3rem $space-2;
-                white-space: nowrap;
-                font-family: $font-sans;
-              }
-            }
-
-            .statusList {
-              display: flex;
-              flex-direction: column;
-
-              li {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: $space-1_1 0;
-                border-bottom: 0.15rem solid var(--color-border);
-                font-size: $font-size-sm;
-                font-family: $font-sans;
-
-                &:last-child {
-                  border-bottom: none;
-                  padding-bottom: 0;
-                }
-
-                .statusKey {
-                  color: var(--color-text-muted);
-                }
-
-                .statusVal {
-                  color: var(--color-text);
-                  font-weight: 500;
-                  text-align: right;
-                }
-              }
-            }
-          }
-        }
-      }
+    .mascotWrapper {
+      display: flex;
+      gap: $space-1;
+      flex-shrink: 0;
     }
   }
 
   .line {
     width: 100%;
-    height: 10rem;
     height: clamp(5rem, 7vw, 10rem);
-    background-color: var(--line);
+    background: var(--line);
+  }
+
+  .bodyInner {
+    width: 100%;
+    padding: $space-6 0 $space-10;
+  }
+
+  .body {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-6;
+
+    .formWrap {
+      flex: 1.15;
+      min-width: 0;
+    }
+
+    .infoWrap {
+      flex: .85;
+      min-width: 20rem;
+      display: flex;
+      flex-direction: column;
+      gap: $space-4;
+    }
   }
 }
 
-.dot {
-  display: inline-block;
-  width: $space-1_1;
-  height: $space-1_1;
-  aspect-ratio: 1;
-  border-radius: $radius-full;
-  background-color: var(--color-primary);
-  margin-right: $space-1;
-  flex-shrink: 0;
+.infoWrap {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+
+  .infoCard {
+    background: var(--color-bg);
+    border: .15rem solid var(--color-border-card);
+    border-radius: $radius-smsm;
+    padding: $space-4;
+    box-shadow: $shadow-2lg;
+    transition: $transition-theme;
+
+    .infoCardHeader {
+      display: flex;
+      align-items: center;
+      gap: $space-2;
+      padding-bottom: $space-3;
+      margin-bottom: $space-3;
+      border-bottom: .15rem solid var(--color-border-card);
+
+      .infoCardIcon {
+        width: 3.2rem;
+        height: 3.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-icon-bg);
+        border: .15rem solid var(--color-icon-border);
+        border-radius: $radius-sssm;
+        flex-shrink: 0;
+
+        svg {
+          width: $font-size-md;
+          height: $font-size-md;
+          color: var(--color-primary);
+        }
+      }
+
+      .infoCardTitle {
+        display: block;
+        font-size: $font-size-lg;
+        font-weight: 700;
+        color: var(--color-text);
+        font-family: $font-sans;
+      }
+
+      .infoCardSub {
+        margin: .3rem 0 0;
+        font-size: $font-size-xs;
+        color: var(--color-text-muted);
+        font-family: $font-sans;
+      }
+    }
+
+    .infoList {
+      display: flex;
+      flex-direction: column;
+
+      .infoItem {
+        display: flex;
+        align-items: center;
+        gap: $space-2;
+        padding: $space-2 0;
+        border-bottom: .15rem solid var(--color-border);
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        .infoIcon {
+          width: 3.2rem;
+          height: 3.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--color-icon-bg);
+          border-radius: $radius-sssm;
+          flex-shrink: 0;
+
+          svg {
+            width: $font-size-md;
+            height: $font-size-md;
+            color: var(--color-primary);
+          }
+        }
+
+        .infoMeta {
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          gap: .2rem;
+
+          .infoValue {
+            display: block;
+            width: 100%;
+            font-size: $font-size-md;
+            font-weight: 500;
+            color: var(--color-text);
+            font-family: $font-sans;
+            transition: color 0.2s ease;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+
+          .infoLabel {
+            font-size: $font-size-xs;
+            color: var(--color-text-muted);
+            font-family: $font-sans;
+          }
+        }
+      }
+    }
+  }
+
+  .quickCard {
+    background: var(--color-bg);
+    border: .15rem solid var(--color-border-card);
+    border-radius: $radius-smsm;
+    padding: $space-4;
+    box-shadow: $shadow-2lg;
+    transition: $transition-theme;
+
+    .quickLinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-2;
+
+      .quickLink {
+        display: inline-flex;
+        align-items: center;
+        gap: $space-1;
+        padding: $space-1_1 $space-3;
+        border: .15rem solid var(--color-border);
+        border-radius: $radius-full;
+        text-decoration: none;
+        font-size: $font-size-sm;
+        font-weight: 500;
+        color: var(--color-text-muted);
+        font-family: $font-sans;
+        transition: .25s;
+
+        svg {
+          width: $font-size-sm;
+          height: $font-size-sm;
+        }
+
+        &:hover {
+          color: var(--color-primary);
+          border-color: var(--color-primary);
+          background: var(--color-icon-bg);
+        }
+      }
+    }
+  }
+
+  .statusCard {
+    background: var(--color-bg);
+    border: .15rem solid var(--color-border-card);
+    border-radius: $radius-smsm;
+    padding: $space-4;
+    box-shadow: $shadow-2lg;
+    transition: $transition-theme;
+
+    .statusHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: $space-3;
+
+      .quickTitle {
+        margin: 0;
+      }
+
+      .statusBadge {
+        padding: .35rem .9rem;
+        border-radius: $radius-full;
+        font-size: $font-size-xs;
+        font-weight: 600;
+        color: var(--color-primary);
+        background: var(--color-icon-bg);
+        border: .1rem solid var(--color-border-red);
+        white-space: nowrap;
+      }
+    }
+
+    .statusList {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $space-2 0;
+        border-bottom: .15rem solid var(--color-border);
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        .statusKey {
+          color: var(--color-text-muted);
+          font-size: $font-size-sm;
+        }
+
+        .statusVal {
+          color: var(--color-text);
+          font-size: $font-size-sm;
+          font-weight: 600;
+          text-align: right;
+        }
+      }
+    }
+  }
 }
 
 .quickTitle {
   display: flex;
   align-items: center;
+  gap: $space-1;
+  margin-bottom: $space-3;
   font-size: $font-size-md;
   font-weight: 700;
   color: var(--color-text);
-  font-family: $font-sans;
-  margin: 0 0 $space-3;
+
+  .dot {
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactPage {
+    .hero {
+      .heroRight {
+        width: 100%;
+        justify-content: flex-end;
+      }
+
+      .heading {
+        font-size: clamp(3rem, 6vw, 4.4rem);
+      }
+    }
+
+    .body {
+      flex-direction: column;
+      align-items: center;
+
+      .infoWrap {
+        width: 100%;
+        min-width: unset;
+        order: 1;
+      }
+
+      .formWrap {
+        width: 100%;
+        order: 2;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contactPage {
+    .inner {
+      padding: $space-4 $space-2;
+    }
+
+    .hero {
+      padding: $space-4 0;
+
+      .heroContent {
+        gap: $space-4;
+      }
+
+      .heroRight {
+        justify-content: center;
+      }
+
+      .heading {
+        font-size: clamp(2.4rem, 8vw, 3.4rem);
+      }
+
+      .subtitle {
+        margin-top: $space-2;
+        font-size: $font-size-sm;
+      }
+    }
+
+    .line {
+      height: 4rem;
+    }
+
+    .body {
+      gap: $space-4;
+    }
+
+    .infoWrap {
+
+      .infoCard,
+      .quickCard,
+      .statusCard {
+        padding: $space-3;
+      }
+
+      .statusList {
+        li {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: .4rem;
+        }
+      }
+
+      .quickLinks {
+        gap: $space-1;
+      }
+    }
+
+    .formWrap {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contactPage {
+    .inner {
+      padding: $space-3 $space-2;
+    }
+
+    .hero {
+      .heroContent {
+        flex-direction: column;
+      }
+
+      .heading {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        font-size: $font-size-xs;
+        line-height: 1.7;
+      }
+    }
+
+    .infoWrap {
+      .infoCardHeader {
+        .infoCardIcon {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+
+        .infoCardTitle {
+          font-size: $font-size-md;
+        }
+      }
+
+      .infoItem {
+        gap: $space-1;
+      }
+
+      .quickLinks {
+        .quickLink {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      .statusBadge {
+        font-size: .7rem;
+      }
+    }
+  }
 }
