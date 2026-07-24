@@ -11,21 +11,26 @@ const Contact = () => {
       <div className={`inner ${styles.inner}`}>
         <div className={styles.hero}>
           <div className={`inner ${styles.heroInner}`}>
-            <div className={styles.heroHeader}>
-              <p className={styles.cardHeader}>04 / 마무리 &amp; 연락하기</p>
+            <div className={styles.heroContent}>
+              <div className={styles.heroLeft}>
+                <h1 className={styles.heading}>
+                  함께라면
+                  <span className={styles.highlight}> 더 좋은 것을</span>
+                  <br />
+                  만들 수 있습니다.
+                </h1>
+
+                <p className={styles.subtitle}>
+                  좋은 프로젝트는 좋은 인연에서 시작됩니다.
+                  언제든 편하게 연락주세요.
+                </p>
+              </div>
+
               <div className={styles.mascotWrapper}>
                 <MiniMascotIcon2_1 />
                 <MiniMascotIcon2_2 />
               </div>
             </div>
-
-            <h1 className={styles.heading}>
-              함께라면 <span className={styles.highlight}>더 좋은 것을</span><br />
-              만들 수 있습니다.
-            </h1>
-            <p className={styles.subtitle}>
-              좋은 프로젝트는 좋은 인연에서 시작됩니다. 언제든 편하게 연락주세요.
-            </p>
           </div>
         </div>
       </div>
@@ -52,20 +57,20 @@ const Contact = () => {
                 </div>
 
                 <ul className={styles.infoList}>
-                  {contactInfoList.map(({ icon: Icon, label, value, href }) => (
+                  {contactInfoList.map(({ icon: Icon, label, value }) => (
                     <li key={label} className={styles.infoItem}>
                       <span className={styles.infoIcon}>
                         <Icon />
                       </span>
+
                       <div className={styles.infoMeta}>
-                        {href ? (
-                          <a href={href} target="_blank" rel="noreferrer" className={styles.infoValue}>
-                            {value}
-                          </a>
-                        ) : (
-                          <span className={styles.infoValue}>{value}</span>
-                        )}
-                        <span className={styles.infoLabel}>{label}</span>
+                        <span className={styles.infoValue}>
+                          {value}
+                        </span>
+
+                        <span className={styles.infoLabel}>
+                          {label}
+                        </span>
                       </div>
                     </li>
                   ))}

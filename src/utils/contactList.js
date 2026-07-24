@@ -15,8 +15,8 @@ export const quickLinks = [
 ]
 
 export const contactInfoList = [
-  { icon: EmailIcon, label: '이메일', value: 'hseolgan@gmail.com', href: 'mailto:hseolgan@gmail.com' },
-  { icon: GithubIcon, label: 'GitHub', value: 'github.com/sukerimjocan19924', href: 'https://github.com/walkingocean19924' },
-  { icon: PhoneIcon, label: '전화', value: '010-7313-7197', href: 'tel:010-7313-7197' },
-  { icon: LocationIcon, label: '주소', value: '경기도 남양주시 진접읍 경복대로 425', href: null },
+  { icon: EmailIcon, label: '이메일', value: 'hseolgan@gmail.com'},
+  { icon: GithubIcon, label: 'GitHub', value: 'github.com/sukerimjocan19924'},
+  { icon: PhoneIcon, label: '전화', value: '010-7313-7197'},
+  { icon: LocationIcon, label: '주소', value: '경기도 남양주시 진접읍 경복대로 425'},
 ]
