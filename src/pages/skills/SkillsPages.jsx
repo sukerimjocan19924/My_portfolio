@@ -70,13 +70,7 @@ const SkillsPages = () => {
                   <span className={styles.countBadge}>{cat.countLabel}</span>
                 </div>
 
-                <Motion.ul
-                  variants={contentVariants}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.3 }}
-                  className={styles.skillList}
-                >
+                <Motion.ul variants={contentVariants} className={styles.skillList}>
                   {cat.items.map(({ icon: Icon, name, level, percent }) => (
                     <Motion.li variants={itemVariants} key={name} className={styles.skillItem}>
                       <div className={styles.skillRow}>
