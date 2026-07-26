@@ -44,7 +44,7 @@
       word-break: keep-all;
 
       .highlight {
-        color: var(--color-primary);
+        color: $color-primary;
       }
     }
 
@@ -53,8 +53,7 @@
       max-width: 42rem;
       font-size: clamp($font-size-md, 1.8vw, $font-size-lg);
       line-height: 1.8;
-      color: var(--color-text-muted);
-      font-family: $font-sans;
+      color: var(--color-text-tertiary);
     }
 
     .mascotWrapper {
@@ -101,8 +100,8 @@
   gap: $space-4;
 
   .infoCard {
-    background: var(--color-bg);
-    border: .15rem solid var(--color-border-card);
+    background: var(--page-card-bg);
+    border: .15rem solid var(--page-card-border);
     border-radius: $radius-smsm;
     padding: $space-4;
     box-shadow: $shadow-2lg;
@@ -114,7 +113,7 @@
       gap: $space-2;
       padding-bottom: $space-3;
       margin-bottom: $space-3;
-      border-bottom: .15rem solid var(--color-border-card);
+      border-bottom: .15rem solid var(--page-card-line);
 
       .infoCardIcon {
         width: 3.2rem;
@@ -122,15 +121,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--color-icon-bg);
-        border: .15rem solid var(--color-icon-border);
+        background: var(--page-card-icon-bg);
+        border: .15rem solid var(--page-card-icon-border);
         border-radius: $radius-sssm;
         flex-shrink: 0;
 
         svg {
           width: $font-size-md;
           height: $font-size-md;
-          color: var(--color-primary);
+          color: $color-primary;
         }
       }
 
@@ -159,11 +158,16 @@
         align-items: center;
         gap: $space-2;
         padding: $space-2 0;
-        border-bottom: .15rem solid var(--color-border);
+        border-bottom: .15rem solid var(--page-card-line);
 
         &:last-child {
           border-bottom: none;
           padding-bottom: 0;
+        }
+
+        &:first-child {
+          border-top: none;
+          padding-top: 0;
         }
 
         .infoIcon {
@@ -172,14 +176,14 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background: var(--color-icon-bg);
+          background: var(--page-card-icon-bg);
           border-radius: $radius-sssm;
           flex-shrink: 0;
 
           svg {
             width: $font-size-md;
             height: $font-size-md;
-            color: var(--color-primary);
+            color: $color-primary;
           }
         }
 
@@ -218,8 +222,8 @@
   }
 
   .quickCard {
-    background: var(--color-bg);
-    border: .15rem solid var(--color-border-card);
+    background: var(--page-card-bg);
+    border: .15rem solid var(--page-card-border);
     border-radius: $radius-smsm;
     padding: $space-4;
     box-shadow: $shadow-2lg;
@@ -234,14 +238,14 @@
         display: inline-flex;
         align-items: center;
         gap: $space-1;
-        padding: $space-1_1 $space-3;
-        border: .15rem solid var(--color-border);
+        padding: $space-1_1 $space-6;
+        border: .15rem solid var(--page-card-border);
         border-radius: $radius-full;
         text-decoration: none;
         font-size: $font-size-sm;
         font-weight: 500;
-        color: var(--color-text-muted);
-        font-family: $font-sans;
+        color: var(--btn-hero-text);
+        background-color: var(--color-tool-card-bg);
         transition: .25s;
 
         svg {
@@ -259,8 +263,8 @@
   }
 
   .statusCard {
-    background: var(--color-bg);
-    border: .15rem solid var(--color-border-card);
+    background: var(--page-card-bg);
+    border: .15rem solid var(--page-card-border-last);
     border-radius: $radius-smsm;
     padding: $space-4;
     box-shadow: $shadow-2lg;
@@ -271,9 +275,15 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: $space-3;
+      padding-bottom: 1.6rem;
+      margin-bottom: 1.6rem;
+      border-bottom: 0.15rem solid var(--page-card-line-last);
 
       .quickTitle {
         margin: 0;
+        padding-bottom: 0rem;
+        margin-bottom: 0rem;
+        border-bottom: none;
       }
 
       .statusBadge {
@@ -281,9 +291,9 @@
         border-radius: $radius-full;
         font-size: $font-size-xs;
         font-weight: 600;
-        color: var(--color-primary);
-        background: var(--color-icon-bg);
-        border: .1rem solid var(--color-border-red);
+        color: $color-primary;
+        background: var(--page-card-icon-bg);
+        border: .1rem solid var(--page-card-icon-border);
         white-space: nowrap;
       }
     }
@@ -297,11 +307,17 @@
         justify-content: space-between;
         align-items: center;
         padding: $space-2 0;
-        border-bottom: .15rem solid var(--color-border);
+
+        &:first-child,
+        &:last-child {
+          border: none;
+          padding: 0;
+        }
 
         &:last-child {
-          border-bottom: none;
-          padding-bottom: 0;
+          .statusVal {
+            color: $color-primary;
+          }
         }
 
         .statusKey {
@@ -322,6 +338,9 @@
 
 .quickTitle {
   display: flex;
+  padding-bottom: 1.6rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 0.15rem solid var(--page-card-line);
   align-items: center;
   gap: $space-1;
   margin-bottom: $space-3;
@@ -333,7 +352,7 @@
     width: .6rem;
     height: .6rem;
     border-radius: 50%;
-    background: var(--color-primary);
+    background: $color-primary;
     flex-shrink: 0;
   }
 }
@@ -414,7 +433,6 @@
 
       .statusList {
         li {
-          flex-direction: column;
           align-items: flex-start;
           gap: .4rem;
         }

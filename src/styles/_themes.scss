@@ -130,6 +130,13 @@
 
   // contactPage
   --line: #fffefe;
+  --page-card-bg: #FFFFFF;
+  --page-card-border: #E0D6D6;
+  --page-card-line: #e8dede;
+  --page-card-icon-bg: #fff0f0;
+  --page-card-icon-border: #ffd5d5;
+  --page-card-border-last: #ffd5d5;
+  --page-card-line-last: #ffd5d5;
 }
 
 [data-theme='dark'] {
@@ -263,4 +270,11 @@
   
   // contactPage
   --line: #1A1A1A;
+  --page-card-bg: #111111;
+  --page-card-border: #1e1e1e;
+  --page-card-line: #1e1e1e;
+  --page-card-icon-bg: #1a0000;
+  --page-card-icon-border: #ff2d2d;
+  --page-card-border-last: #390000;
+  --page-card-line-last: #390000;
 }

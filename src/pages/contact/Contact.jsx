@@ -4,6 +4,8 @@ import { MiniMascotIcon2_1, MiniMascotIcon2_2 } from '../../utils/mascotIcon'
 import ContactCard from '../../components/contactCard/ContactCard'
 import { InfoCardIcon } from '../../utils/contactIcon'
 import { quickLinks, contactInfoList } from '../../utils/contactList'
+import { motion as Motion } from 'framer-motion'
+import { contentVariants, itemVariants } from '../../utils/variants'
 
 const Contact = () => {
   return (
@@ -11,26 +13,31 @@ const Contact = () => {
       <div className={`inner ${styles.inner}`}>
         <div className={styles.hero}>
           <div className={`inner ${styles.heroInner}`}>
-            <div className={styles.heroContent}>
+            <Motion.div
+              variants={contentVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.15 }}
+              className={styles.heroContent}>
               <div className={styles.heroLeft}>
-                <h1 className={styles.heading}>
+                <Motion.h1 variants={itemVariants} className={styles.heading}>
                   함께라면
                   <span className={styles.highlight}> 더 좋은 것을</span>
                   <br />
                   만들 수 있습니다.
-                </h1>
+                </Motion.h1>
 
-                <p className={styles.subtitle}>
+                <Motion.p variants={itemVariants} className={styles.subtitle}>
                   좋은 프로젝트는 좋은 인연에서 시작됩니다.
                   언제든 편하게 연락주세요.
-                </p>
+                </Motion.p>
               </div>
 
               <div className={styles.mascotWrapper}>
                 <MiniMascotIcon2_1 />
                 <MiniMascotIcon2_2 />
               </div>
-            </div>
+            </Motion.div>
           </div>
         </div>
       </div>
@@ -40,12 +47,22 @@ const Contact = () => {
       <div className={`inner ${styles.inner}`}>
         <div className={`inner ${styles.bodyInner}`}>
           <div className={styles.body}>
-            <div className={styles.formWrap}>
-              <ContactCard variant="page" onClose={() => setIsModalOpen(false)} showClose={false} />
-            </div>
+            <Motion.div
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.1 }}
+              className={styles.formWrap}>
+              <ContactCard variant="page" showClose={false} />
+            </Motion.div>
 
-            <div className={styles.infoWrap}>
-              <div className={styles.infoCard}>
+            <Motion.div
+              variants={contentVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.1 }}
+              className={styles.infoWrap}>
+              <Motion.div variants={itemVariants} className={styles.infoCard}>
                 <div className={styles.infoCardHeader}>
                   <span className={styles.infoCardIcon}>
                     <InfoCardIcon />
@@ -64,20 +81,15 @@ const Contact = () => {
                       </span>
 
                       <div className={styles.infoMeta}>
-                        <span className={styles.infoValue}>
-                          {value}
-                        </span>
-
-                        <span className={styles.infoLabel}>
-                          {label}
-                        </span>
+                        <span className={styles.infoLabel}>{label}</span>
+                        <span className={styles.infoValue}>{value}</span>
                       </div>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Motion.div>
 
-              <div className={styles.quickCard}>
+              <Motion.div variants={itemVariants} className={styles.quickCard}>
                 <p className={styles.quickTitle}>
                   <span className={styles.dot} /> 빠른 링크
                 </p>
@@ -89,9 +101,9 @@ const Contact = () => {
                     </a>
                   ))}
                 </div>
-              </div>
+              </Motion.div>
 
-              <div className={styles.statusCard}>
+              <Motion.div variants={itemVariants} className={styles.statusCard}>
                 <div className={styles.statusHeader}>
                   <p className={styles.quickTitle}>
                     <span className={styles.dot} /> 현재 상태
@@ -112,8 +124,8 @@ const Contact = () => {
                     <span className={styles.statusVal}>평균 12시간 이내</span>
                   </li>
                 </ul>
-              </div>
-            </div>
+              </Motion.div>
+            </Motion.div>
           </div>
         </div>
       </div>
