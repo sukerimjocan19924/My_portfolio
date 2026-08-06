@@ -1,4 +1,4 @@
-import { EmailIcon, DiscordIcon, PhoneIcon, GithubIcon, LocationIcon } from '../utils/contactIcon'
+import { EmailIcon, DiscordIcon, PhoneIcon, GithubIcon, LocationIcon, FileTextIcon, Dashboard } from '../utils/contactIcon'
 
 export const contactList = [
   { id: 'email', icon: EmailIcon, label: '이메일', value: 'hseolgan@gmail.com' },
@@ -9,9 +9,9 @@ export const contactList = [
 
 // contactPage
 export const quickLinks = [
-  { label: 'GitHub', href: 'https://github.com/walkingocean19924', icon: GithubIcon },
-  { label: '이력서', href: '#', icon: EmailIcon },
-  { label: '포트폴리오', href: '#', icon: EmailIcon },
+  { label: 'GitHub', href: 'https://github.com/repos', icon: GithubIcon },
+  { label: '이력서', href: '#', icon: FileTextIcon },
+  { label: '포트폴리오', href: '#', icon: Dashboard },
 ]
 
 export const contactInfoList = [
